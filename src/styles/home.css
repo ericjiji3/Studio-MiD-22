@@ -1,5 +1,22 @@
-.home .carousel-selector{
+.home .carousel-selector .carousel-display{
+    border: 2px solid #000000;
+    width: 480px;
     
+    border-radius: 15px;
+    background-color: #D9D9D915;
+    margin: 35px auto 0;
+    max-width: 100%;
+    overflow: hidden;
+}
+.home .carousel-selector .carousel-display .scroll{
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+}
+.home .carousel-selector .carousel-display .scroll h2{
+    display: inline-block;
+    margin: 0 5px;
 }
 .home .carousel-selector .carousel-select-container{
     width: 300px;
@@ -12,3 +29,12 @@
     text-align: center;
     
 }
+
+@keyframes marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
