@@ -1,0 +1,31 @@
+.contact .left h2{
+    font-family: 'Switzer ExtraLight';
+}
+.contact .left .form-container{
+    margin-top: 100px;
+}
+.contact .left .form-container .text-input{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    background-color: #faf9f6;
+    font-family: 'Switzer Light';
+    font-size: 30px;
+    color: #000000;
+    display: block;
+    margin: 25px 0;
+}
+.contact .left .form-container .text-input:focus{
+    outline: none;
+}
+.contact .left .form-container .submit-button{
+    font-family: 'Switzer Light';
+    font-size: 30px;
+    background-color: #000000;
+    color: #faf9f6;
+    border: none; 
+    outline: none;
+    border-radius: 15px;
+    padding: 12px;
+    margin-top: 30px;
+}

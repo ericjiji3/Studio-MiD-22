@@ -1,0 +1,14 @@
+.home .carousel-selector{
+    
+}
+.home .carousel-selector .carousel-select-container{
+    width: 300px;
+    margin: auto;
+    background-color: #D9D9D915;
+    border: 2px solid #000000;
+}
+.home .carousel-selector .carousel-select-container ul{
+    list-style: none;
+    text-align: center;
+    
+}

@@ -1,0 +1,63 @@
+.carousel{
+    overflow: auto;
+}
+
+.carousel .gallery{
+    /* white-space:nowrap; */
+    /* display: flex;
+    overflow-x: auto;
+    justify-content: center;
+    scroll-behavior: smooth; 
+    overflow-y: visible; */
+    /* margin-top: 25px; */
+    overflow-y: visible;
+}
+.carousel .gallery::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+/* .carousel .gallery div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    flex: none;
+} */
+.carousel .gallery .slick-slider .slick-list .slick-track .slick-slide:not(.slick-active) img{
+    scale: .5;
+    transition: all .3s ease-in;
+    /* transition-delay: 0.15s; */
+}
+/* .carousel .gallery .slick-slider .slick-list .slick-track .slick-slide:not(.slick-active){
+    opacity: 0;
+    transition: all 0.3s ease-in;
+} */
+.carousel .gallery .slick-slider .slick-list .slick-track .slick-active{
+    opacity: 1;
+    transition: all 0.3s ease-in;
+    transition-delay: 0.3s;
+}
+.carousel .gallery .slick-slider .slick-list .slick-track .slick-active img{
+    scale: .75;
+    transition: all 0.3s ease-in;
+    transition-delay: 0.3s;
+}
+.carousel .gallery .slick-slider .slick-list .slick-track .slick-active.slick-current img{
+    scale: 1;
+    transition: all 0.3s ease-in;
+    transition-delay: 0.3s;
+}
+.carousel .gallery .image-container{
+    display: flex!important;
+    justify-content: center;
+}
+.carousel .gallery img{
+    object-fit: cover;
+    margin: 0 0px;
+    scale: 1;
+    transition: all 0.3s ease-in;
+    /* position: absolute; */
+    /* top: 0; */
+    
+}

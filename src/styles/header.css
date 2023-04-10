@@ -1,0 +1,17 @@
+.navBar{
+    margin: 35px 0 100px;
+}
+
+.navBar ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+}
+/* .navBar ul li{
+    padding: 0 25px;
+} */
+
+.navBar ul li h2.active{
+    text-decoration: underline;
+}
