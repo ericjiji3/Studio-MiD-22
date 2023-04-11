@@ -27,7 +27,7 @@ export default function Carousel({images}){
 
     const settings = {
         arrows: false,
-      slidesToShow: 5,
+      slidesToShow: 3,
       slidesToScroll: 1,
       centerMode: true
       };
