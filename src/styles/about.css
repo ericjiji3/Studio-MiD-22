@@ -1,0 +1,24 @@
+.about{
+    
+}
+.about .profile{
+    display: flex;
+}
+.about .profile.michelle{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 170px 0;
+}
+.about .profile .image-container{
+    width: 50%;
+}
+.about .profile.michelle .text-container{
+    padding-right: 50px;
+}
+.about .profile .text-container{
+    width: 50%;
+}
+.about .profile .text-container .content{
+    margin-top: 40px;
+    
+}
