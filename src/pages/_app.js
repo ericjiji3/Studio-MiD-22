@@ -8,6 +8,7 @@ import '@/styles/about.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {useEffect} from 'react';
+import Head from 'next/head'
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
@@ -19,6 +20,13 @@ export default function App({ Component, pageProps }) {
 }, []);
   return (
     <>
+      <Head>
+        <title>Studio MiD 22</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/mid21.png" />
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+      </Head>
       <Header/>
       <Component {...pageProps} />
     </>
