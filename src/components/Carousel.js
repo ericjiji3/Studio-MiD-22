@@ -69,7 +69,14 @@ export default function Carousel({images}){
             0% {-webkit-transform:translateX(0)} 
             100% {-webkit-transform:translate(-${(img.clientWidth + 50) * (images.length)}px)}
         }`;
+        // let boxKeyframes = 
+        // `@-webkit-keyframes scroll {
+        //     0% {-webkit-transform:} 
+        //     100% {-webkit-transform:translate(-${(img.clientWidth + 50) * (images.length)}px)}
+        // }
+        // `
         styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+        styleSheet.insertRule(boxKeyframes, styleSheet.cssRules.length);
     })
     let style = {
         animationName: 'scroll',
