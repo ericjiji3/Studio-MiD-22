@@ -76,7 +76,7 @@ export default function Carousel({images}){
         // }
         // `
         styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
-        styleSheet.insertRule(boxKeyframes, styleSheet.cssRules.length);
+        // styleSheet.insertRule(boxKeyframes, styleSheet.cssRules.length);
     })
     let style = {
         animationName: 'scroll',

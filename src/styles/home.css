@@ -46,13 +46,16 @@
     
 }
 .home .carousel-selector .carousel-select-container ul li{
-    margin: 5px 0;
+    margin: 10px auto;
+    width:fit-content;
 }
 .home .carousel-selector .carousel-select-container ul li:hover{
     cursor: pointer;
+    /* margin:auto; */
 }
 .home .carousel-selector .carousel-select-container ul li h2{
     font-size: 20px;
+    margin: auto;
 }
 @keyframes marquee {
     0% {
