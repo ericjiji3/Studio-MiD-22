@@ -6,8 +6,7 @@ import '@/styles/contact.css';
 import '@/styles/carousel.css';
 import '@/styles/about.css';
 import '@/styles/worktab.css';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import '@/styles/work.css';
 import {useEffect} from 'react';
 import Head from 'next/head'
 
