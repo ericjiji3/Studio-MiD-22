@@ -1,3 +1,6 @@
+.home{
+    margin: 0 100px;
+}
 .home .carousel-selector .carousel-display{
     border: 2px solid #000000;
     width: 480px;

@@ -1,5 +1,11 @@
 .contact{
     display: flex;
+    margin: 0 100px;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+.contact .left{
+    width: 65%;
 }
 .contact .left h2{
     font-family: 'Switzer ExtraLight';
@@ -33,7 +39,9 @@
     padding: 12px;
     margin-top: 30px;
 }
-
+.contact .right{
+    width: 35%;
+}
 /* Description part of calendly */
 .contact .right .calender-cover{
     position: relative;
@@ -43,6 +51,7 @@
     /* background-image: url('/public/images/opening/opening-04.jpg'); */
     object-fit: cover;
     margin-bottom: -5px;
+    width: 100%;
 }
 .contact .right .calender-cover h2{
     position: absolute;
@@ -53,6 +62,6 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 .contact .right .calendly-inline-widget{
-    width: 500px;
+    width: 100%;
 
 }

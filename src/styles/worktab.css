@@ -7,22 +7,28 @@
     position: relative;
     z-index: 1;
 }
+.work-tab:hover{
+    cursor: pointer;
+}
 .work-tab .image-container{
     position: absolute;
     width: auto;
     height: auto;
     object-fit: contain;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    /* left: 50%;
+    top: 50%; */
+    /* transform: translate(-50%, -50%); */
     z-index: 2;
 }
 .work-tab .image-container img{
     opacity: 0;
+    object-fit: cover;
+    transition: all 0.2s ease;
 }
 .work-tab .image-container.active img{
-
+    
     opacity: 1;
+    transition: all 0.2s ease;
     
 }
 /* .work-tab .image-container img{

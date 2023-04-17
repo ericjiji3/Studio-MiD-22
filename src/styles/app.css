@@ -1,0 +1,12 @@
+.start{
+    display: none;
+}
+.start.active{
+    display: unset;
+}
+.components{
+    display: none;
+}
+.components.active{
+    display: unset;
+}

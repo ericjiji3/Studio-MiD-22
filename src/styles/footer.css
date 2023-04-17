@@ -1,0 +1,17 @@
+.footer{
+    margin: 25px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 200px)
+}
+.footer .logos{
+    display: flex;
+    align-items: center;
+}
+.footer .logos a:not(:first-child){
+    margin: 0 5px;
+}
+.footer .logos a:first-child{
+    margin-right: 5px;
+}
