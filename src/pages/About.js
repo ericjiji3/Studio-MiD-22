@@ -7,7 +7,7 @@ export default function About(){
         <div className="about">
             <div className="profile ming">
                 <div className="image-container">
-                    <Image src={Ming} width={400}/>
+                    <Image src={Ming} width={700} height={500}/>
                 </div>
                 
                 <div className="text-container">
@@ -20,7 +20,7 @@ export default function About(){
             </div>
             <div className="profile michelle">
                 <div className="image-container">
-                    <Image src={Michelle} width={500}/>
+                    <Image src={Michelle} width={700} height={500}/>
                 </div>
                 
                 <div className="text-container">

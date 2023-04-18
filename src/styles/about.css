@@ -13,6 +13,9 @@
 .about .profile .image-container{
     width: 50%;
 }
+.about .profile .image-container img{
+    object-fit: cover;
+}
 .about .profile.michelle .text-container{
     padding-right: 50px;
 }
