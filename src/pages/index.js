@@ -6,8 +6,6 @@ import portraits from './portraits.js';
 import grads from './grad.js';
 import { useRef, useEffect, useState } from 'react';
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
   const [activeGallery, setActiveGallery] = useState('Portraits');
   const [activeDisplay, setActiveDisplay] = useState('Portraits Portraits Portraits Portraits')
@@ -20,13 +18,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Studio MiD 22</title>
-        <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/mid21.png" />
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-      </Head>
+
       <div className="home">
         <div className="carousels">
           {activeGallery === 'Portraits' && (
@@ -47,19 +39,19 @@ export default function Home() {
           <div className="carousel-select-container">
             <ul>
               <li onClick={() => selectGallery('Creative')}>
-                <h2>Creative</h2>
+                <h2 className={activeGallery==='Creative' ? 'select-text active' : 'select-text'}>Creative</h2>
               </li>
               <li onClick={() => selectGallery('Graduation')}>
-                <h2>Graduation</h2>
+                <h2 className={activeGallery==='Graduation' ? 'select-text active' : 'select-text'}>Graduation</h2>
               </li>
               <li onClick={() => selectGallery('Portraits')}>
-                <h2>Portraits</h2>
+                <h2 className={activeGallery==='Portraits' ? 'select-text active' : 'select-text'}>Portraits</h2>
               </li>
               <li onClick={() => selectGallery('Product Shoots')}>
-                <h2>Product Shoots</h2>
+                <h2 className={activeGallery==='Product Shoots' ? 'select-text active' : 'select-text'}>Product Shoots</h2>
               </li>
               <li onClick={() => selectGallery('Album Covers')}>
-                <h2>Album Covers</h2>
+                <h2 className={activeGallery==='Album Covers' ? 'select-text active' : 'select-text'}>Album Covers</h2>
               </li>
             </ul>
           </div>

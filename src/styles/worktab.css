@@ -45,4 +45,6 @@
     border-style: solid;
     border-width: 0px 50px 50px 0;
     border-color: transparent #000000 transparent transparent;
+    position: relative;
+    z-index: 1;
 }

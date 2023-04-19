@@ -65,3 +65,14 @@
     width: 100%;
 
 }
+@media(max-width: 1500px){
+    .contact .left{
+        width: 60%;
+    }
+    .contact .left .form-container{
+        margin-top: 50px;
+    }
+    .contact .right{
+        width: 40%;
+    }
+}
