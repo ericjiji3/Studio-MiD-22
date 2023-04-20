@@ -7,7 +7,7 @@ import op5 from '../../public/images/opening/opening-05.jpg';
 import Logo from '../../public/mid21.png';
 import {useRef, useState, useEffect} from 'react';
 
-export default function StartingScreen(){
+export default function StartingScreen(props){
     const [activeIndex, setActiveIndex] = useState(0);
     const [images, setImages] = useState([
             op1,
@@ -16,25 +16,38 @@ export default function StartingScreen(){
             op4
     ]
     );
+    const [time, setTime] = useState(1000);
+    const [intervalId, setIntervalId] = useState(null);
+    let timer;
+    
+    useEffect(()=>{
+        
+        timer = setInterval(switchImage, time);
+        // setIntervalId(timer);
+        return ()=>{
+            clearInterval(timer);
+        }
+    }, [switchImage])
     function switchImage(){
-        if(activeIndex < images.length){
+        // console.log(activeIndex, images.length);
+        if(props.click){
+            clearInterval(timer);
+            return;
+        }
+        if(activeIndex < images.length - 1){
             setActiveIndex(activeIndex + 1);
         }else{
             setActiveIndex(0);
         }
+        
         return activeIndex;
     }
-    useEffect(()=>{
-
-        const timer = setInterval(switchImage, 1000);
-        return ()=>{
-            clearInterval(timer);
-        }
-    }, [])
-
+    // function stopInterval(){
+    //     clearInterval(timer);
+    // }
     
     return(
-        <div className="starting-screen">
+        <div className={props.click ? 'starting-screen clicked' : 'starting-screen'}>
             <Image
                 src={Logo}
                 width={30}

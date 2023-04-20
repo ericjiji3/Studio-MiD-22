@@ -16,15 +16,31 @@ import {useEffect, useState} from 'react';
 import Head from 'next/head'
 
 export default function App({ Component, pageProps }) {
+  const [startStyle, setStartStyle] = useState({display: 'block'});
+  const [homeStyle, setHomeStyle] = useState({display: 'none'});
   const [start, setStart] = useState(false);
-
+  const finishStart = () =>{
+    setStart(true);
+  }
   useEffect(() => {
     if (typeof window !== 'undefined') {
             const loader = document.getElementById('globalLoader');
         if (loader)
             loader.style.display = 'none';
     }
-}, []);
+    if(start){
+      setTimeout(function(){
+        setStartStyle({ display: 'none' });
+      }, 2010);
+      setTimeout(function(){
+        setHomeStyle({ display: 'unset', opacity: 0 });
+      }, 1200);
+      setTimeout(function(){
+        setHomeStyle({ opacity: 1, transition: 'opacity 2s ease-in'});
+      }, 1500);
+    }
+}, [start]);
+
   return (
     <>
       <Head>
@@ -34,11 +50,11 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/mid21.png" />
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
       </Head>
-      <div className={start ? 'start' : 'start active'} onClick={()=>setStart(true)}>
-        <StartingScreen/>
+      <div className="start" onClick={finishStart} style={startStyle}>
+        <StartingScreen click={start}/>
       </div>
       
-      <div className={start ? 'components active' : 'components'}>
+      <div className="components" style={homeStyle}>
         <Header/>
         <Component {...pageProps} />
         <Footer/>

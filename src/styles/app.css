@@ -1,12 +1,8 @@
 .start{
-    display: none;
-}
-.start.active{
-    display: unset;
+    position:absolute;
+    z-index: 2;
 }
 .components{
-    display: none;
-}
-.components.active{
-    display: unset;
+    /* position: relative; */
+    z-index: 1;
 }

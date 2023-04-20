@@ -15,17 +15,22 @@ export default function Home() {
     setActiveDisplay(nameScroll);
   }
 
-
   return (
     <>
 
       <div className="home">
         <div className="carousels">
           {activeGallery === 'Portraits' && (
-            <Carousel images={portraits} className={activeGallery ? 'active' : ''}/>
+            <div className={activeGallery ? 'active' : 'inactive'}>
+              <Carousel images={portraits} />
+            </div>
+            
           )}
           {activeGallery === 'Graduation' && (
-            <Carousel images={grads} className={activeGallery ? 'active' : ''}/>
+            <div className={activeGallery ? 'active' : 'inactive'}>
+              <Carousel images={grads}/>
+            </div>
+            
           )}
           
         </div>

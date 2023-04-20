@@ -1,6 +1,9 @@
 .home{
     margin: 0 100px;
 }
+.home .carousels .inactive{
+    animation: 0.5s galleryFade ease-in forwards;
+}
 .home .carousel-selector .carousel-display{
     border: 2px solid #000000;
     width: 480px;
@@ -80,8 +83,12 @@
     animation: 2s pointerEvent linear infinite;
     transition: 0.15s opacity ease-in;
 }
+.home .carousel-selector .carousel-select-container ul li .select-text{
+    text-decoration: underline #00000000;
+}
 .home .carousel-selector .carousel-select-container ul li .select-text.active{
-    text-decoration: underline;
+    text-decoration-color: #000000;
+    transition: text-decoration-color 0.5s;
 }
 .home .carousel-selector .carousel-select-container ul li .select-text:hover::before{
     /* content: '';
@@ -96,6 +103,14 @@
     animation: 2s pointerEvent linear infinite; */
     opacity: 1;
     transition: 0.15s opacity ease-in;
+}
+@keyframes galleryFade{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 @keyframes marquee {
     0% {

@@ -43,10 +43,20 @@
 }
 .carousel .gallery .image-container{
     margin: 0 25px;
+    transform: translateY(-400px);
 }
 .carousel .gallery::-webkit-scrollbar {
     height: 0;
     width: 0;
+}
+@keyframes cascade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 /* .carousel .gallery div{
     width: 100%;

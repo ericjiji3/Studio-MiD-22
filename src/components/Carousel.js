@@ -9,55 +9,6 @@ export default function Carousel({images}){
     const imageRef = useRef();
     const pauseClass = 'pause-state-class';
 
-    // useEffect(() => {
-    //     const slider = sliderRef.current;
-    //     const handleWheel = (event) =>{
-    //         event.preventDefault();
-    //         const scrollAmount = event.deltaY;
-    //         if(event.deltaY > 0){
-    //             slider.slickPrev();
-    //         }else{
-    //             slider.slickNext();
-    //         }
-    //     }
-
-    //     window.addEventListener('mouseover', handleHover);
-
-    //     return() => {
-    //         window.removeEventListener('mouseover', handleHover);
-    //     };
-    // }, [])
-    // useEffect(() => {
-    //     const slider = sliderRef.current;
-    //     const handleMouseEnter = (e) => {
-    //         e.preventDefault();
-    //         console.log(window.getComputedStyle(slider).getPropertyValue("border-radius"));
-    //     }
-    //     window.addEventListener('mouseover', handleMouseEnter);
-
-    //     return() => {
-    //         window.removeEventListener('mouseover', handleMouseEnter);
-    //     };
-    // })
-    
-
-    // const handleMouseLeave = e =>{
-    //     const slider = sliderRef.current;
-    //     slider.slickPlay();
-    // }
-
-    // const settings = {
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     autoplay: true,
-    //     autoplaySpeed: 0,
-    //     speed: 5000,
-    //     arrows: false,
-    //     variableWidth: true,
-    //     cssEase: 'linear',
-    //     dots: false,
-    //     pauseOnHover: true
-    //   };
     useEffect(() => {
         let styleSheet = document.styleSheets[0];
         const img = imageRef.current;
@@ -90,8 +41,14 @@ export default function Carousel({images}){
             <div className='gallery' ref={sliderRef} style={style}>
                 {/* <Slider {...settings}> */}
                     
-                        {images.map((image) => (
-                            <div className='image-container'>
+                        {images.map((image, index) => (
+                            <div className='image-container' style={{
+                                animationName: 'cascade',
+                                animationTimingFunction: 'ease-in-out',
+                                animationDuration: '0.6s',
+                                animationDelay: index/4.5 + 's',
+                                animationFillMode: 'forwards'
+                              }}>
                             <Image
                                 data-key={image.id}
                                 src={image.src}
@@ -102,8 +59,13 @@ export default function Carousel({images}){
                             />
                             </div>
                         ))}
-                        {images.map((image) => (
-                            <div className='image-container'>
+                        {images.map((image, index) => (
+                            <div className='image-container' style={{
+                                animationName: 'cascade',
+                                animationTimingFunction: 'ease-in-out',
+                                animationDuration: '0.6s',
+                                animationDelay: index/4.5 + 's',
+                                animationFillMode: 'forwards'}}>
                             <Image
                                 data-key={image.id}
                                 src={image.src}

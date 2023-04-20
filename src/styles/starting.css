@@ -3,6 +3,11 @@
     height: 100vh;
     overflow: hidden;
     position: relative;
+    opacity: 1;
+}
+.starting-screen.clicked{
+    opacity: 0; 
+    transition: opacity 2s ease-in;
 }
 .starting-screen .logo{
     position: absolute;
