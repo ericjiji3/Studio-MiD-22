@@ -19,6 +19,7 @@ export default function App({ Component, pageProps }) {
   const [startStyle, setStartStyle] = useState({display: 'block'});
   const [homeStyle, setHomeStyle] = useState({display: 'none'});
   const [start, setStart] = useState(false);
+  
   const finishStart = () =>{
     setStart(true);
   }

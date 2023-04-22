@@ -1,5 +1,7 @@
 .home{
     margin: 0 100px;
+    position: relative;
+    z-index: 1;
 }
 .home .carousels .inactive{
     animation: 0.5s galleryFade ease-in forwards;
@@ -104,6 +106,23 @@
     opacity: 1;
     transition: 0.15s opacity ease-in;
 }
+@media(max-width: 500px){
+    .home{
+        margin: 0 50px;
+    }
+    .home .carousel-selector .carousel-select-container:before{
+        bottom: 99.5%;
+    }
+}
+
+
+
+
+
+
+
+
+
 @keyframes galleryFade{
     0%{
         opacity: 1;

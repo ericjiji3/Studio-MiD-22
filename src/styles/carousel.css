@@ -124,3 +124,12 @@
         height: 500px;
     }
 }
+@media(max-width : 500px){
+    .carousel .gallery .image-container{
+        margin: 0 10px;
+        transform: translateY(-400px);
+    }
+    .carousel .gallery .image-container img{
+        width: 225px;
+    }
+}

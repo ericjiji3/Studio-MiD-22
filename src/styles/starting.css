@@ -20,3 +20,9 @@
     width: 100%;
     height: 100%;
 }
+@media(max-width: 500px) {
+    .starting-screen .covers-container .cover{
+        height: 100vh;
+        object-position: 60% 50%;
+    }
+}
