@@ -76,3 +76,40 @@
         width: 40%;
     }
 }
+@media(max-width: 500px){
+    .contact{
+        margin-left: 25px;
+        margin-right: 25px;
+        flex-wrap: wrap;
+        position: relative;
+        padding-top: 60px;
+        margin-top: 0;
+    }
+    .contact .left, .contact .right{
+        width: 100%;
+        /* order: 2; */
+        margin-top: 15px;
+    }
+    .contact .left h2{
+        padding-right: 0px;
+        /* position: absolute;
+        top: 0; */
+    }
+    /* .contact .left .form-container{
+        margin-top: -75px;
+    } */
+    .contact .left .form-container .text-input{
+        width: 100%;
+    }
+    .contact .left .form-container .submit-button{
+        width: 100%;
+        margin-top: 0px;
+    }
+    .contact .right{
+        /* order: 1; */
+        margin-top: 75px;
+        margin-bottom: -50px;
+        position: relative;
+        z-index:0;
+    }
+}

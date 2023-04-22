@@ -9,22 +9,22 @@ export default function Header(props) {
   const [burger, setBurger] = useState(false);
   const [style, setStyle] = useState();
   
-  useEffect(()=>{
-    setTimeout(function(){
-      if(!burger){
-        setStyle({
-          opacity: 0,
-          transition: 'opacity 0.9s ease'
-        })
-      }else{
-        setStyle({
-          opacity: 1,
-          transition: 'opacity 0.9s ease'
-        })
-      }
+  // useEffect(()=>{
+  //   setTimeout(function(){
+  //     if(!burger){
+  //       setStyle({
+  //         opacity: 0,
+  //         transition: 'opacity 0.9s ease'
+  //       })
+  //     }else{
+  //       setStyle({
+  //         opacity: 1,
+  //         transition: 'opacity 0.9s ease'
+  //       })
+  //     }
       
-    }, 1000)
-  })
+  //   }, 1000)
+  // })
   return (
       <nav className="navBar">
         <div className="logo">

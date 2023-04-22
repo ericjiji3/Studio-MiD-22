@@ -31,7 +31,7 @@
 }
 .navBar ul li a h2::before{
     content: "";
-    position: fixed;
+    position: absolute;
     display: block;
     width: 100%;
     height: 2px;
@@ -52,8 +52,14 @@
 }
 @media (max-width: 500px){
     .navBar{
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 20px;
+        margin-bottom: -10px;
+        position: fixed;
+        z-index: 4;
+        width: calc(100% - 50px);
+        mix-blend-mode: hue;
     }
     .navBar .nav-container{
         display: none;
@@ -70,7 +76,7 @@
         height: 100vh;
         top: 0;
         left: 0;
-        padding: 50vh 50px 0;
+        padding: 50vh 25px 0;
         background-color: #FAF9F6;
         z-index: 2;
     }

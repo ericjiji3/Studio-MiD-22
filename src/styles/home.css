@@ -108,7 +108,8 @@
 }
 @media(max-width: 500px){
     .home{
-        margin: 0 50px;
+        margin: 0 25px;
+        padding-top: 60px;
     }
     .home .carousel-selector .carousel-select-container:before{
         bottom: 99.5%;
