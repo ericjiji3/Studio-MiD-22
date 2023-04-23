@@ -11,7 +11,7 @@ export default function StartingScreen(props){
     const [activeIndex, setActiveIndex] = useState(0);
     const [images, setImages] = useState([
             op1,
-            op2,
+            // op2,
             op3,
             op4
     ]
