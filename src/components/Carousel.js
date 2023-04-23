@@ -42,7 +42,7 @@ export default function Carousel({images}){
                 {/* <Slider {...settings}> */}
                     
                         {images.map((image, index) => (
-                            <div className='image-container' style={{
+                            <div className='image-container' key={index} style={{
                                 animationName: 'cascade',
                                 animationTimingFunction: 'ease-in-out',
                                 animationDuration: '0.6s',
@@ -60,7 +60,7 @@ export default function Carousel({images}){
                             </div>
                         ))}
                         {images.map((image, index) => (
-                            <div className='image-container' style={{
+                            <div className='image-container' key={index} style={{
                                 animationName: 'cascade',
                                 animationTimingFunction: 'ease-in-out',
                                 animationDuration: '0.6s',

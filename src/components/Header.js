@@ -31,6 +31,7 @@ export default function Header(props) {
           <Image
             src={Logo}
             width= {30}
+            alt="oops"
           />
         </div>
         <div className={burger ? 'nav-container active' : 'nav-container'} style={style}>

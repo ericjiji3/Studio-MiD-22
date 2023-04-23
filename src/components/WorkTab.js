@@ -46,6 +46,7 @@ export default function WorkTab(props){
                         src={props.image}
                         width={200}
                         height={300}
+                        alt="oops"
                     />
                 </div>
                 <div className="triangle">

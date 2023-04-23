@@ -13,6 +13,7 @@ export default function Footer(){
                         src={instagram}
                         width={25}
                         height={25}
+                        alt="oops"
                     />
                 </a>
                 <a href="https://www.instagram.com/v3ganghouse/">
@@ -20,6 +21,7 @@ export default function Footer(){
                         src={podcast}
                         width={25}
                         height={25}
+                        alt="oops"
                     />
                 </a>
                 <a href="https://jiji.lol/">
@@ -27,6 +29,7 @@ export default function Footer(){
                         src={jiji}
                         width={25}
                         height={25}
+                        alt="oops"
                     />
                 </a>
 

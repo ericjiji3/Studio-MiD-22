@@ -26,7 +26,7 @@ export default function Contact(){
             </div>  
             <div className="right">
             <div className="calender-cover">
-                <Image src={cover} width={500} height={150}/>
+                <Image src={cover} width={500} height={150} alt="oops"/>
                 <h2>April</h2>
             </div>
             <InlineWidget url="https://calendly.com/studiomid22/gradshoot?hide_event_type_details=1&hide_gdpr_banner=1&background_color=faf9f6&primary_color=1a1a1a"/>

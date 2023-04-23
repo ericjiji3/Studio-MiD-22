@@ -14,6 +14,7 @@ import '@/styles/work.css';
 import '@/styles/footer.css';
 import {useEffect, useState} from 'react';
 import Head from 'next/head'
+import Script from 'next/script';
 
 export default function App({ Component, pageProps }) {
   const [startStyle, setStartStyle] = useState({display: 'block'});
@@ -49,7 +50,7 @@ export default function App({ Component, pageProps }) {
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/mid21.png" />
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+        <Script src="https://assets.calendly.com/assets/external/widget.js"></Script>
       </Head>
       <div className="start" onClick={finishStart} style={startStyle}>
         <StartingScreen click={start}/>

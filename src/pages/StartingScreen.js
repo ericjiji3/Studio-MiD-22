@@ -52,6 +52,7 @@ export default function StartingScreen(props){
                 src={Logo}
                 width={30}
                 className="logo"
+                alt=""
             />
             <div className="covers-container">
                 <Image
