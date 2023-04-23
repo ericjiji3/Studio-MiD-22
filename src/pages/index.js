@@ -2,8 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Carousel from '../components/Carousel.js';
-import portraits from './portraits.js';
-import grads from './grad.js';
+import portraits from '../components/portraits.js';
+import grads from '../components/grad.js';
 import { useRef, useEffect, useState } from 'react';
 
 export default function Home() {
