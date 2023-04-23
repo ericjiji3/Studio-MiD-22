@@ -4,12 +4,11 @@ import loader from "./loader.js";
 export default function Document() {
   return (
     <Html lang="en">
-      <Head />
-      <head>
-          <style>
+      <Head>
+        <style>
               {loader}
           </style>
-      </head>
+      </Head>
       <body>
         <div id={'globalLoader'}>
               <div className="loader">

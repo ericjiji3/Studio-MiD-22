@@ -50,8 +50,9 @@ export default function App({ Component, pageProps }) {
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/mid21.png" />
-        <Script src="https://assets.calendly.com/assets/external/widget.js"></Script>
+        
       </Head>
+      <Script src="https://assets.calendly.com/assets/external/widget.js"></Script>
       <div className="start" onClick={finishStart} style={startStyle}>
         <StartingScreen click={start}/>
       </div>

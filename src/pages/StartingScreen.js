@@ -22,7 +22,8 @@ export default function StartingScreen(props){
     
     useEffect(()=>{
         
-        timer = setInterval(switchImage, time);
+        const newTimer = setInterval(switchImage, time);
+        timer = newTimer;
         // setIntervalId(timer);
         return ()=>{
             clearInterval(timer);
