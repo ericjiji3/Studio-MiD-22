@@ -13,13 +13,11 @@ export default function Header(props) {
   //   setTimeout(function(){
   //     if(!burger){
   //       setStyle({
-  //         opacity: 0,
-  //         transition: 'opacity 0.9s ease'
+  //         display: 'none'
   //       })
   //     }else{
   //       setStyle({
-  //         opacity: 1,
-  //         transition: 'opacity 0.9s ease'
+  //         display: 'unset'
   //       })
   //     }
       
@@ -31,28 +29,27 @@ export default function Header(props) {
           <Image
             src={Logo}
             width= {30}
-            alt="oops"
           />
         </div>
         <div className={burger ? 'nav-container active' : 'nav-container'} style={style}>
           <ul>
             <li>
-              <Link href="/">
+              <Link href="/" onClick={()=>setBurger(!burger)}>
                 <h2 className={router.pathname === '/' ? 'active' : ''}>Studio MiD 22</h2>
               </Link>
             </li>
             <li>
-              <Link href="/Work">
+              <Link href="/Work" onClick={()=>setBurger(!burger)}>
                 <h2 className={router.pathname === '/Work' ? 'active' : ''}>Work</h2>
               </Link>
             </li>
             <li>
-              <Link href="/Contact">
+              <Link href="/Contact" onClick={()=>setBurger(!burger)}>
                 <h2 className={router.pathname === '/Contact' ? 'active' : ''}>Contact</h2>
               </Link>
             </li>
             <li>
-              <Link href="/About">
+              <Link href="/About" onClick={()=>setBurger(!burger)}>
                 <h2 className={router.pathname === '/About' ? 'active' : ''}>About Us</h2>
               </Link>
             </li>

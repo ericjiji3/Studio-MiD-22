@@ -4,6 +4,9 @@ import { Inter } from 'next/font/google'
 import Carousel from '../components/Carousel.js';
 import portraits from '../components/portraits.js';
 import grads from '../components/grad.js';
+import products from '../components/products.js';
+import creatives from '../components/creatives.js';
+import albums from '../components/albums.js';
 import { useRef, useEffect, useState } from 'react';
 
 export default function Home() {
@@ -32,7 +35,24 @@ export default function Home() {
             </div>
             
           )}
-          
+          {activeGallery === 'Product Shoots' && (
+            <div className={activeGallery ? 'active' : 'inactive'}>
+              <Carousel images={products}/>
+            </div>
+            
+          )}
+          {activeGallery === 'Creative' && (
+            <div className={activeGallery ? 'active' : 'inactive'}>
+              <Carousel images={creatives}/>
+            </div>
+            
+          )}
+          {activeGallery === 'Album Covers' && (
+            <div className={activeGallery ? 'active' : 'inactive'}>
+              <Carousel images={albums}/>
+            </div>
+            
+          )}
         </div>
         <div className="carousel-selector">
           <div className="carousel-display">

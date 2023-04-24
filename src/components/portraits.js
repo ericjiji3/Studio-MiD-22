@@ -1,59 +1,75 @@
+import portrait1 from '../../public/images/portraits/emiree-54.jpg';
+import portrait2 from '../../public/images/portraits/emiree-165.jpg';
+import portrait3 from '../../public/images/portraits/epixie-2.jpg';
+import portrait4 from '../../public/images/portraits/film-111.jpg';
+import portrait5 from '../../public/images/portraits/film-115.jpg';
+import portrait6 from '../../public/images/portraits/hehe-348.jpg';
+import portrait7 from '../../public/images/portraits/la-246.jpg';
+import portrait8 from '../../public/images/portraits/la-248.jpg';
+import portrait9 from '../../public/images/portraits/MG-60.jpg';
+import portrait10 from '../../public/images/portraits/nami-24.jpg';
+import portrait11 from '../../public/images/portraits/nick-06.jpg';
+import portrait12 from '../../public/images/portraits/nick-19.jpg';
+import portrait13 from '../../public/images/portraits/wrak-8.jpg';
+import portrait14 from '../../public/images/portraits/zoe-23.jpg';
+
+
 const portraits = [
     {
         id: 0,
-        src: '/../public/images/portraits/emiree-54.jpg'
+        src: portrait1
     },
     {
         id: 1,
-        src: '/../public/images/portraits/emiree-165.jpg'
+        src: portrait2
     },
     {
         id: 2,
-        src: '/../public/images/portraits/epixie-2.jpg'
+        src: portrait3
     },
     {
         id: 3,
-        src: '/../public/images/portraits/film-111.jpg'
+        src: portrait4
     },
     {
         id: 4,
-        src: '/../public/images/portraits/film-115.jpg'
+        src: portrait5
     },
     {
         id: 5,
-        src: '/../public/images/portraits/hehe-348.jpg'
+        src: portrait6
     },
     {
         id: 6,
-        src: '/../public/images/portraits/la-246.jpg'
+        src: portrait7
     },
     {
         id: 7,
-        src: '/../public/images/portraits/la-248.jpg'
+        src: portrait8
     },
     {
         id: 8,
-        src: '/../public/images/portraits/MG-60.jpg'
+        src: portrait9
     },
     {
         id: 9,
-        src: '/../public/images/portraits/nami-24.jpg'
+        src: portrait10
     },
     {
         id: 10,
-        src: '/../public/images/portraits/nick-06.jpg'
+        src: portrait11
     },
     {
         id: 11,
-        src: '/../public/images/portraits/nick-19.jpg'
+        src: portrait12
     },
     {
         id: 12,
-        src: '/../public/images/portraits/wrak-8.jpg'
+        src: portrait13
     },
     {
         id: 13,
-        src: '/../public/images/portraits/zoe-23.jpg'
+        src: portrait14
     }
 ]
 
