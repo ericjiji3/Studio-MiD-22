@@ -126,9 +126,9 @@ a {
 }
 @font-face {
   font-family: 'Switzer Light';
-  src: url('/public/fonts/SWITZER-LIGHT.OTF');
+  src: url('/public/fonts/SWITZER-LIGHT.OTF') format('OTF');
 }
 @font-face {
   font-family: 'Switzer ExtraLight';
-  src: url('/public/fonts/SWITZER-EXTRALIGHT.OTF');
+  src: url('/public/fonts/SWITZER-EXTRALIGHT.OTF') format('OTF');
 }
