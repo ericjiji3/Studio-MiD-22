@@ -62,14 +62,32 @@
         /* mix-blend-mode: ; */
     }
     .navBar .nav-container{
-        display: none;
+        opacity: 0;
         position: absolute;
-        
+        transition: 0.5s opacity ease;
+    }
+    .navBar .nav-container ul{
+        display: block;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        padding: 50vh 25px 0;
+        background-color: #FAF9F6;
+        z-index: 2;
+    }
+    .navBar .nav-container ul li{
+        margin: 10px 0;
+    }
+    .navBar .nav-container ul li a h2::before{
+        position: absolute;
     }
     .navBar .nav-container.active{
-        display: unset;
+        opacity: 1;
+        transition: 0.5s opacity ease;
     }
-    .navBar .nav-container.active ul{
+    /* .navBar .nav-container.active ul{
         display: block;
         position: fixed;
         width: 100vw;
@@ -85,7 +103,7 @@
     }
     .navBar .nav-container.active ul li a h2::before{
         position: absolute;
-    }
+    } */
     .navBar .burger-mobile{
         display: block;
         width: 30px;

@@ -1,7 +1,7 @@
 import WorkTab from '../components/WorkTab.js';
 import utility from '../../public/images/creative/creative1.jpg';
-import shadow from '../../public/images/creative/creative15.jpg';
-import plastic from '../../public/images/creative/creative16.jpg';
+import shadow from '../../public/images/creative/creative16.jpg';
+import plastic from '../../public/images/creative/creative15.jpg';
 
 export default function Work(){
 
