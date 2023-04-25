@@ -1,15 +1,15 @@
 import WorkTab from '../components/WorkTab.js';
+import utility from '../../public/images/creative/creative1.jpg';
+import shadow from '../../public/images/creative/creative15.jpg';
+import plastic from '../../public/images/creative/creative16.jpg';
 
 export default function Work(){
-    const utility = [
-        '/../public/images/creative/utility-1.jpg'
-    ]
 
     return(
         <div className='work'>
-                <WorkTab projectName="Utility Poles" projectDetails="Mingjian Dan, March 2023" image='/../public/images/creative/utility-1.jpg'/>
-                <WorkTab projectName="Shadow Studies" projectDetails="Mingjian Dan, August 2020" image='/../public/images/creative/shadow-11.jpg'/>
-                <WorkTab projectName="Plastic Identity" projectDetails="Mingjian Dan, July 2020" image='/../public/images/creative/plastic-3.jpg'/>
+                <WorkTab projectName="Utility Poles" projectDetails="Mingjian Dan, March 2023" image={utility}/>
+                <WorkTab projectName="Shadow Studies" projectDetails="Mingjian Dan, August 2020" image={shadow}/>
+                <WorkTab projectName="Plastic Identity" projectDetails="Mingjian Dan, July 2020" image={plastic}/>
         </div>
     )
 }

@@ -11,7 +11,17 @@
   font-weight: 500;
 } */
 @font-face {
-  font-family: 'Switzer';
+  font-family: 'Switzer ExtraLight';
+  src: url('//cdn.fontshare.com/wf/JXG72O2TZZZ5GVUMRFHCQDLSBYPRIWXQ/ZP6MERMWLACGBGZHTVL3PGEM4LJZTZ57/O2INHB7RBA62NQZWIAP3RS5WRI4PR4T5.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/JXG72O2TZZZ5GVUMRFHCQDLSBYPRIWXQ/ZP6MERMWLACGBGZHTVL3PGEM4LJZTZ57/O2INHB7RBA62NQZWIAP3RS5WRI4PR4T5.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/JXG72O2TZZZ5GVUMRFHCQDLSBYPRIWXQ/ZP6MERMWLACGBGZHTVL3PGEM4LJZTZ57/O2INHB7RBA62NQZWIAP3RS5WRI4PR4T5.ttf') format('truetype');
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Switzer Light';
   src: url('//cdn.fontshare.com/wf/EW5HJEX6O4L64XUWQA2XU7Q6BZ3B4JA4/ZWUP4SQYHHMMSS5LFHFFBX6DXL7C3DTU/H5EOHLIZH5K7IZK6SGYJI75L4KV6FUO7.woff2') format('woff2'),
        url('//cdn.fontshare.com/wf/EW5HJEX6O4L64XUWQA2XU7Q6BZ3B4JA4/ZWUP4SQYHHMMSS5LFHFFBX6DXL7C3DTU/H5EOHLIZH5K7IZK6SGYJI75L4KV6FUO7.woff') format('woff'),
        url('//cdn.fontshare.com/wf/EW5HJEX6O4L64XUWQA2XU7Q6BZ3B4JA4/ZWUP4SQYHHMMSS5LFHFFBX6DXL7C3DTU/H5EOHLIZH5K7IZK6SGYJI75L4KV6FUO7.ttf') format('truetype');
@@ -23,7 +33,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Switzer';
+  font-family: 'Switzer Light';
 }
 html,
 body, #__next {
@@ -31,7 +41,8 @@ body, #__next {
   overflow-x: hidden;
   height: 100%;
   background-color: #FAF9F6;
-  font-family: 'Switzer';
+  font-family: 'Switzer Light';
+  color: #000000;
   /* margin: 0 50px; */
   position: relative;
 }
@@ -54,7 +65,7 @@ h2{
 }
 span{
   font-size: 20px;
-  font-family: 'Switzer'; 
+  font-family: 'Switzer ExtraLight'; 
 }
 ::placeholder{
   color: #000000;
