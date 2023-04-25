@@ -76,6 +76,8 @@
         padding: 50vh 25px 0;
         background-color: #FAF9F6;
         z-index: 0;
+        visibility: hidden;
+        transition: 0.5s visibility ease;
     }
     .navBar .nav-container ul li{
         margin: 10px 0;
@@ -89,6 +91,8 @@
     }
     .navBar .nav-container.active ul{
         z-index: 2;
+        visibility: visible;
+        transition: 0.5s visibility ease;
     }
     /* .navBar .nav-container.active ul{
         display: block;
