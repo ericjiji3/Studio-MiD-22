@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Switzer Light';
   src: url('/fonts/SWITZER-LIGHT.OTF') format('OTF');
   font-style: normal;
@@ -9,13 +9,21 @@
   src: url('/fonts/SWITZER-EXTRALIGHT.OTF') format('OTF');
   font-style: normal;
   font-weight: 500;
+} */
+@font-face {
+  font-family: 'Switzer';
+  src: url('//cdn.fontshare.com/wf/EW5HJEX6O4L64XUWQA2XU7Q6BZ3B4JA4/ZWUP4SQYHHMMSS5LFHFFBX6DXL7C3DTU/H5EOHLIZH5K7IZK6SGYJI75L4KV6FUO7.woff2') format('woff2'),
+       url('//cdn.fontshare.com/wf/EW5HJEX6O4L64XUWQA2XU7Q6BZ3B4JA4/ZWUP4SQYHHMMSS5LFHFFBX6DXL7C3DTU/H5EOHLIZH5K7IZK6SGYJI75L4KV6FUO7.woff') format('woff'),
+       url('//cdn.fontshare.com/wf/EW5HJEX6O4L64XUWQA2XU7Q6BZ3B4JA4/ZWUP4SQYHHMMSS5LFHFFBX6DXL7C3DTU/H5EOHLIZH5K7IZK6SGYJI75L4KV6FUO7.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
 }
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Switzer Light';
+  font-family: 'Switzer';
 }
 html,
 body, #__next {
@@ -23,7 +31,7 @@ body, #__next {
   overflow-x: hidden;
   height: 100%;
   background-color: #FAF9F6;
-  font-family: 'Switzer Light';
+  font-family: 'Switzer';
   /* margin: 0 50px; */
   position: relative;
 }
@@ -46,7 +54,7 @@ h2{
 }
 span{
   font-size: 20px;
-  font-family: 'Switzer ExtraLight'; 
+  font-family: 'Switzer'; 
 }
 ::placeholder{
   color: #000000;
