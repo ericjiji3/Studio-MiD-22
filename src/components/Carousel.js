@@ -56,6 +56,7 @@ export default function Carousel({images}){
                                 height={340}
                                 alt="oops"
                                 ref={imageRef}
+                                priority
                             />
                             </div>
                         ))}
@@ -73,6 +74,7 @@ export default function Carousel({images}){
                                 height={340}
                                 alt="oops"
                                 ref={imageRef}
+                                priority
                             />
                             </div>
                         ))}
