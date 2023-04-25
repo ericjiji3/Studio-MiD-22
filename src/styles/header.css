@@ -68,7 +68,7 @@
     }
     .navBar .nav-container ul{
         display: block;
-        position: fixed;
+        
         width: 100vw;
         height: 100vh;
         top: 0;
@@ -86,6 +86,9 @@
     .navBar .nav-container.active{
         opacity: 1;
         transition: 0.5s opacity ease;
+    }
+    .navBar .nav-container.active ul{
+        position: fixed;
     }
     /* .navBar .nav-container.active ul{
         display: block;
