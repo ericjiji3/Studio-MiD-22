@@ -1,5 +1,7 @@
 .work{
     margin: 0 100px;
+    position: relative;
+    z-index: 1;
 }
 @media(max-width: 500px){
     .work{

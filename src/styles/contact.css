@@ -3,6 +3,8 @@
     margin: 0 100px;
     margin-top: 25px;
     justify-content: space-between;
+    position: relative;
+    z-index: 1;
 }
 .contact .left{
     width: 65%;
