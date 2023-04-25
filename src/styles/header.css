@@ -68,14 +68,14 @@
     }
     .navBar .nav-container ul{
         display: block;
-        
+        position: fixed;
         width: 100vw;
         height: 100vh;
         top: 0;
         left: 0;
         padding: 50vh 25px 0;
         background-color: #FAF9F6;
-        z-index: 2;
+        z-index: 1;
     }
     .navBar .nav-container ul li{
         margin: 10px 0;
@@ -88,7 +88,7 @@
         transition: 0.5s opacity ease;
     }
     .navBar .nav-container.active ul{
-        position: fixed;
+        
     }
     /* .navBar .nav-container.active ul{
         display: block;
