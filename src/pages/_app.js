@@ -36,10 +36,10 @@ export default function App({ Component, pageProps }) {
       }, 2010);
       setTimeout(function(){
         setHomeStyle({ display: 'unset', opacity: 0 });
-      }, 1200);
-      setTimeout(function(){
-        setHomeStyle({ opacity: 1, transition: 'opacity 2s ease-in'});
       }, 1500);
+      setTimeout(function(){
+        setHomeStyle({ opacity: 1, transition: 'opacity 1.5s ease-in'});
+      }, 1800);
     }
 }, [start]);
 
