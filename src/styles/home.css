@@ -48,6 +48,9 @@
 	border-bottom-color: #faf9f6;
 	filter: drop-shadow(0 -0.1rem 0 rgba(0, 0, 0, 1));
 }
+.home .carousel-selector .carousel-select-container .animate{
+    overflow: hidden;
+}
 .home .carousel-selector .carousel-select-container ul{
     list-style: none;
     text-align: center;

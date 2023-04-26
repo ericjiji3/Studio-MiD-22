@@ -18,10 +18,10 @@ export default function WorkTab(props){
             console.log(e.clientX, e.clientY);
             console.log("tab: " + tab.current.offsetTop);
             const image = imageRef.current;
-            const localX = e.clientX - tab.current.offsetLeft + 20;
+            const localX = e.clientX - tab.current.offsetLeft - image.clientWidth/2;
             const localY = e.clientY - tab.current.offsetTop;
             image.style.left = localX + 'px';
-            image.style.top = localY - image.clientHeight/6 + 'px';
+            image.style.top = localY - image.clientHeight/3 + 'px';
             const imagePos = e.clientY  + image.clientHeight/2;
             // image.style.transform = 'translateY(-' + image.clientHeight + 'px)';
         }

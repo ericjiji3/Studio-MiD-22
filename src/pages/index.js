@@ -7,7 +7,10 @@ import grads from '../components/grad.js';
 import products from '../components/products.js';
 import creatives from '../components/creatives.js';
 import albums from '../components/albums.js';
+import fashion from '../components/fashion.js';
+import headshots from '../components/headshots.js';
 import { useRef, useEffect, useState } from 'react';
+import { motion,AnimatePresence } from "framer-motion";
 
 export default function Home() {
   const [activeGallery, setActiveGallery] = useState('Portraits');
@@ -16,6 +19,10 @@ export default function Home() {
     setActiveGallery(name);
     let nameScroll = name + " " + name + " " +name + " " + name;
     setActiveDisplay(nameScroll);
+  }
+  const variants = {
+    open: { opacity: 1, y: 0 },
+  closed: { opacity: 0, y: "-100%" },
   }
 
   return (
@@ -53,15 +60,36 @@ export default function Home() {
             </div>
             
           )}
+          {activeGallery === 'Fashion' && (
+            <div className={activeGallery ? 'active' : 'inactive'}>
+              <Carousel images={fashion}/>
+            </div>
+            
+          )}
+          {activeGallery === 'Headshots' && (
+            <div className={activeGallery ? 'active' : 'inactive'}>
+              <Carousel images={headshots}/>
+            </div>
+            
+          )}
         </div>
         <div className="carousel-selector">
-          <div className="carousel-display">
-            <div className="scroll">
-                    <h2>{activeDisplay}</h2>
-                    <h2>{activeDisplay}</h2>
+          <motion.div style={{margin: 'auto'}} initial={{width: 25}} animate={{ width: '100%'}} transition={{duration: 0.75}}>
+            <div className="carousel-display">
+            
+              <div className="scroll" >
+                <AnimatePresence><motion.h2 key={activeDisplay} initial={{opacity: 0, y: -100}} animate={{ opacity: 1, y: 0}} exit={{ opacity: 0, y: 100 }} transition={{duration: 0.75}}>{activeDisplay}</motion.h2></AnimatePresence>
+                <AnimatePresence><motion.h2 key={activeDisplay} initial={{opacity: 0, y: -100}} animate={{ opacity: 1, y: 0}} exit={{ opacity: 0, y: 100 }} transition={{duration: 0.75}}>{activeDisplay}</motion.h2></AnimatePresence>
+                
+                      
+              </div>
+             
             </div>
-          </div>
+          </motion.div>
+          
+          
           <div className="carousel-select-container">
+          <motion.div className="animate" initial={{ height: 5 }} animate={{ height: 'fit-content' }} transition={{duration: 0.75}}>
             <ul>
               <li onClick={() => selectGallery('Creative')}>
                 <h2 className={activeGallery==='Creative' ? 'select-text active' : 'select-text'}>Creative</h2>
@@ -78,8 +106,17 @@ export default function Home() {
               <li onClick={() => selectGallery('Album Covers')}>
                 <h2 className={activeGallery==='Album Covers' ? 'select-text active' : 'select-text'}>Album Covers</h2>
               </li>
+              <li onClick={() => selectGallery('Fashion')}>
+                <h2 className={activeGallery==='Fashion' ? 'select-text active' : 'select-text'}>Fashion</h2>
+              </li>
+              <li onClick={() => selectGallery('Headshots')}>
+                <h2 className={activeGallery==='Headshots' ? 'select-text active' : 'select-text'}>Headshots</h2>
+              </li>
             </ul>
+            </motion.div>
           </div>
+          
+          
         </div>
 
       </div>

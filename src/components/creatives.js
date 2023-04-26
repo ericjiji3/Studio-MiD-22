@@ -3,11 +3,9 @@ import creative2 from '../../public/images/creative/creative2.jpg';
 import creative3 from '../../public/images/creative/creative3.jpg';
 import creative4 from '../../public/images/creative/creative4.jpg';
 import creative5 from '../../public/images/creative/creative5.jpg';
-import creative6 from '../../public/images/creative/creative6.jpg';
 import creative7 from '../../public/images/creative/creative7.jpg';
 import creative8 from '../../public/images/creative/creative8.jpg';
 import creative9 from '../../public/images/creative/creative9.jpg';
-import creative10 from '../../public/images/creative/creative10.jpg';
 import creative11 from '../../public/images/creative/creative11.jpg';
 import creative12 from '../../public/images/creative/creative12.jpg';
 import creative13 from '../../public/images/creative/creative13.jpg';
@@ -42,10 +40,6 @@ const creatives = [
         src: creative5
     },
     {
-        id: 5,
-        src: creative6
-    },
-    {
         id: 6,
         src: creative7
     },
@@ -56,10 +50,6 @@ const creatives = [
     {
         id: 8,
         src: creative9
-    },
-    {
-        id: 9,
-        src: creative10
     },
     {
         id: 10,
