@@ -24,8 +24,11 @@
     height: 100%;
 }
 @media(max-width: 500px) {
+    .starting-screen{
+        height: 100svh;
+    }
     .starting-screen .covers-container .cover{
-        height: 100vh;
+        height: 100svh;
         object-position: 60% 50%;
     }
 }
