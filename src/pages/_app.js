@@ -15,8 +15,9 @@ import '@/styles/footer.css';
 import {useEffect, useState} from 'react';
 import Head from 'next/head'
 import Script from 'next/script';
+import { motion,AnimatePresence } from "framer-motion";
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps, router}) {
   const [startStyle, setStartStyle] = useState({display: 'block'});
   const [homeStyle, setHomeStyle] = useState({display: 'none'});
   const [start, setStart] = useState(false);
@@ -59,8 +60,16 @@ export default function App({ Component, pageProps }) {
       
       <div className="components" style={homeStyle}>
         <Header/>
-        <Component {...pageProps} />
-        <Footer/>
+        <AnimatePresence mode="wait" initial={false}>
+        
+          <Component {...pageProps} key={router.asPath}/>
+
+        </AnimatePresence>
+        <AnimatePresence mode="wait" initial={false}>
+        
+        <Footer key={router.asPath}/>
+        </AnimatePresence>
+        
       </div>
 
     </>

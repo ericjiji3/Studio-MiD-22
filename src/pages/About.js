@@ -1,10 +1,21 @@
 import Image from 'next/image';
 import Ming from '../../public/images/about/ming.jpg';
 import Michelle from '../../public/images/about/michelle.jpg';
+import { motion,AnimatePresence } from "framer-motion";
 
 export default function About(){
     return(
         <div className="about">
+            <motion.div
+    initial={{ y: 300, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    exit={{ y: 300, opacity: 0 }}
+    transition={{
+      type: "spring",
+      stiffness: 260,
+      damping: 20,
+    }}
+  >
             <div className="profile ming">
                 <div className="image-container">
                     <Image src={Ming} width={700} height={500} alt="oops"/>
@@ -31,6 +42,7 @@ export default function About(){
                     </div>
                 </div>
             </div>
+            </motion.div>
         </div>
     )
 }

@@ -27,6 +27,7 @@ export default function Home() {
 
   return (
     <>
+      <motion.div exit={{opacity: 0}} transition={{duration: 0.5}}>
 
       <div className="home">
         <div className="carousels">
@@ -74,22 +75,16 @@ export default function Home() {
           )}
         </div>
         <div className="carousel-selector">
-          <motion.div style={{margin: 'auto'}} initial={{width: 25}} animate={{ width: '100%'}} transition={{duration: 0.75}}>
             <div className="carousel-display">
-            
               <div className="scroll" >
-                <AnimatePresence><motion.h2 key={activeDisplay} initial={{opacity: 0, y: -100}} animate={{ opacity: 1, y: 0}} exit={{ opacity: 0, y: 100 }} transition={{duration: 0.75}}>{activeDisplay}</motion.h2></AnimatePresence>
-                <AnimatePresence><motion.h2 key={activeDisplay} initial={{opacity: 0, y: -100}} animate={{ opacity: 1, y: 0}} exit={{ opacity: 0, y: 100 }} transition={{duration: 0.75}}>{activeDisplay}</motion.h2></AnimatePresence>
-                
-                      
+                <motion.h2 key={activeDisplay} initial={{opacity: 0, y: -50}} exit={{opacity: 0, y: 50}} animate={{ opacity: 1, y: 0}} transition={{duration: 0.5}}>{activeDisplay}</motion.h2>
+                <motion.h2 key={activeGallery} initial={{opacity: 0, y: -50}} exit={{opacity: 0, y: 50}} animate={{ opacity: 1, y: 0}} transition={{duration: 0.5}}>{activeDisplay}</motion.h2>
               </div>
-             
             </div>
-          </motion.div>
           
           
           <div className="carousel-select-container">
-          <motion.div className="animate" initial={{ height: 5 }} animate={{ height: 'fit-content' }} transition={{duration: 0.75}}>
+          <motion.div className="animate" initial={{height: 5, opacity: 0}} exit={{height: 5, opacity: 0}} animate={{height: '100%', opacity: 1}} transition={{duration: 0.5}}>
             <ul>
               <li onClick={() => selectGallery('Creative')}>
                 <h2 className={activeGallery==='Creative' ? 'select-text active' : 'select-text'}>Creative</h2>
@@ -120,6 +115,8 @@ export default function Home() {
         </div>
 
       </div>
+              
+      </motion.div>
     </>
   )
 }

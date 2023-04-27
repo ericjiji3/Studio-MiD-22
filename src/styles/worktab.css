@@ -52,4 +52,9 @@
     border-color: transparent #000000 transparent transparent;
     position: relative;
     z-index: 1;
+    transition: border-color 0.2s ease-in;
+}
+.work-tab:hover .triangle{
+    border-color: transparent #D9D9D9 transparent transparent;
+    transition: border-color 0.2s ease-in;
 }
