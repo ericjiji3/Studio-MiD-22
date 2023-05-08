@@ -68,11 +68,14 @@ export default function StartingScreen(props){
                 alt=""
             />
             <div className="covers-container">
-                <Image
+                {/* <Image
                     src={images[activeIndex]}
                     className='cover'
                     alt='err'
-                />
+                /> */}
+                <video autoPlay={true} loop={true} muted={true}>
+                    <source src={require('../../public/images/opening/openingvid.mp4')}/>
+                </video>
             </div>
         </div>
     )
