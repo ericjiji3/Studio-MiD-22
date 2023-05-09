@@ -18,10 +18,6 @@ export default function Home() {
   const [activeGallery, setActiveGallery] = useState('Portraits');
   const [activeDisplay, setActiveDisplay] = useState('Portraits Portraits Portraits Portraits')
   const [mobile, setMobile] = useState(false);
-  const [dimensions, setDimensions] = useState({ 
-    height: window.innerHeight,
-    width: window.innerWidth
-  })
   function selectGallery(name){
     setActiveGallery(name);
     let nameScroll = name + " " + name + " " +name + " " + name;
