@@ -63,6 +63,7 @@ export default function Home() {
                     height={'340'}
                     key={pic.id}
                     alt='oops'
+                    priority
                   />
                 )
               })}
@@ -80,6 +81,7 @@ export default function Home() {
                     height={'340'}
                     key={pic.id}
                     alt='oops'
+                    priority
                   />
                 )
               })}
@@ -97,6 +99,7 @@ export default function Home() {
                     height={'340'}
                     key={pic.id}
                     alt='oops'
+                    priority
                   />
                 )
               })}
@@ -114,6 +117,7 @@ export default function Home() {
                     height={'340'}
                     key={pic.id}
                     alt='oops'
+                    priority
                   />
                 )
               })}
@@ -131,6 +135,7 @@ export default function Home() {
                     height={'340'}
                     key={pic.id}
                     alt='oops'
+                    priority
                   />
                 )
               })}
@@ -148,6 +153,7 @@ export default function Home() {
                     height={'340'}
                     key={pic.id}
                     alt='oops'
+                    priority
                   />
                 )
               })}
@@ -165,6 +171,7 @@ export default function Home() {
                     height={'340'}
                     key={pic.id}
                     alt='oops'
+                    priority
                   />
                 )
               })}
