@@ -116,7 +116,7 @@
 }
 @media(max-width: 1000px){
     .carousels{
-        margin: 0 -35px;
+        margin: 0 -25px!important;
     }
     .carousels .active .indiana-scroll-container{
         display: flex;
@@ -146,7 +146,7 @@
         object-fit: cover;
         margin: 0 10px;
         transform: translateY(-400px);
-        animation: cascade 0.6s ease-in-out forwards;
+        animation: cascade 0.75s ease-in-out forwards;
     }
 }
 @media(max-width: 500px){
