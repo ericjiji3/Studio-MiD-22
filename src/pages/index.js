@@ -29,19 +29,22 @@ export default function Home() {
   }
   useEffect(()=>{
     function handleResize(){
+      console.log('handleresize');
       if(window.innerWidth <= 1000){
         setMobile(true);
       }else{
         setMobile(false);
       }
     }
-
     window.addEventListener('resize', handleResize);
+
+    handleResize();
 
     return()=>{
       window.removeEventListener('resize', handleResize);
+      
     }
-  })
+  }, [mobile])
   return (
     <>
       <motion.div exit={{opacity: 0}} transition={{duration: 0.5}}>

@@ -116,7 +116,7 @@
 }
 @media(max-width: 1000px){
     .carousels{
-        margin: 0 -25px;
+        margin: 0 -35px;
     }
     .carousels .active .indiana-scroll-container{
         display: flex;
@@ -134,12 +134,12 @@
         background: linear-gradient(to right,  #FAF9F6 0%,rgba(255,255,255,0) 50%);
     }
     .carousels .active::after{
-        right: 0;
+        right: -25px;
         top: 0;
         transform: rotateZ(180deg);
     }
     .carousels .active::before{
-        left: 0;
+        left: -25px;
         top: 0;
     }
     .carousels .active .indiana-scroll-container img{
