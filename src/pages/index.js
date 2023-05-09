@@ -11,10 +11,17 @@ import fashion from '../components/fashion.js';
 import headshots from '../components/headshots.js';
 import { useRef, useEffect, useState } from 'react';
 import { motion,AnimatePresence } from "framer-motion";
+import { ScrollContainer } from 'react-indiana-drag-scroll'
+import 'react-indiana-drag-scroll/dist/style.css';
 
 export default function Home() {
   const [activeGallery, setActiveGallery] = useState('Portraits');
   const [activeDisplay, setActiveDisplay] = useState('Portraits Portraits Portraits Portraits')
+  const [mobile, setMobile] = useState(false);
+  const [dimensions, setDimensions] = useState({ 
+    height: window.innerHeight,
+    width: window.innerWidth
+  })
   function selectGallery(name){
     setActiveGallery(name);
     let nameScroll = name + " " + name + " " +name + " " + name;
@@ -24,12 +31,137 @@ export default function Home() {
     open: { opacity: 1, y: 0 },
   closed: { opacity: 0, y: "-100%" },
   }
+  useEffect(()=>{
+    function handleResize(){
+      if(window.innerWidth <= 1000){
+        setMobile(true);
+      }else{
+        setMobile(false);
+      }
+    }
 
+    window.addEventListener('resize', handleResize);
+
+    return()=>{
+      window.removeEventListener('resize', handleResize);
+    }
+  })
   return (
     <>
       <motion.div exit={{opacity: 0}} transition={{duration: 0.5}}>
-
       <div className="home">
+      {mobile ? (
+
+        <div className="carousels">
+          {activeGallery === 'Portraits' && (
+            <div className={activeGallery ? 'active' : 'inactive'}>
+              <ScrollContainer>
+              {portraits.map((pic) => {
+                return(
+                  <Image
+                    src={pic.src}
+                    width={'250'}
+                    height={'340'}
+                  />
+                )
+              })}
+              </ScrollContainer>
+            </div>
+          )}
+          {activeGallery === 'Graduation' && (
+            <div className={activeGallery ? 'active' : 'inactive'}>
+              <ScrollContainer>
+              {grads.map((pic) => {
+                return(
+                  <Image
+                    src={pic.src}
+                    width={'250'}
+                    height={'340'}
+                  />
+                )
+              })}
+              </ScrollContainer>
+            </div>
+          )}
+          {activeGallery === 'Product Shoots' && (
+            <div className={activeGallery ? 'active' : 'inactive'}>
+              <ScrollContainer>
+              {products.map((pic) => {
+                return(
+                  <Image
+                    src={pic.src}
+                    width={'250'}
+                    height={'340'}
+                  />
+                )
+              })}
+              </ScrollContainer>
+            </div>
+          )}
+          {activeGallery === 'Creative' && (
+            <div className={activeGallery ? 'active' : 'inactive'}>
+              <ScrollContainer>
+              {creatives.map((pic) => {
+                return(
+                  <Image
+                    src={pic.src}
+                    width={'250'}
+                    height={'340'}
+                  />
+                )
+              })}
+              </ScrollContainer>
+            </div>
+          )}
+          {activeGallery === 'Album Covers' && (
+            <div className={activeGallery ? 'active' : 'inactive'}>
+              <ScrollContainer>
+              {albums.map((pic) => {
+                return(
+                  <Image
+                    src={pic.src}
+                    width={'250'}
+                    height={'340'}
+                  />
+                )
+              })}
+              </ScrollContainer>
+            </div>
+          )}
+          {activeGallery === 'Fashion' && (
+            <div className={activeGallery ? 'active' : 'inactive'}>
+              <ScrollContainer>
+              {fashion.map((pic) => {
+                return(
+                  <Image
+                    src={pic.src}
+                    width={'250'}
+                    height={'340'}
+                  />
+                )
+              })}
+              </ScrollContainer>
+            </div>
+          )}
+          {activeGallery === 'Headshots' && (
+            <div className={activeGallery ? 'active' : 'inactive'}>
+              <ScrollContainer>
+              {headshots.map((pic) => {
+                return(
+                  <Image
+                    src={pic.src}
+                    width={'250'}
+                    height={'340'}
+                  />
+                )
+              })}
+              </ScrollContainer>
+            </div>
+          )}
+        </div>
+
+      ) : (
+
         <div className="carousels">
           {activeGallery === 'Portraits' && (
             <div className={activeGallery ? 'active' : 'inactive'}>
@@ -74,6 +206,9 @@ export default function Home() {
             
           )}
         </div>
+
+        )}
+        
         <div className="carousel-selector">
             <div className="carousel-display">
               <div className="scroll" >

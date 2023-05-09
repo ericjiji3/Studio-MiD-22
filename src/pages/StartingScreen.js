@@ -73,6 +73,7 @@ export default function StartingScreen(props){
                     className='cover'
                     alt='err'
                 /> */}
+                <div className="color-filter"></div>
                 <video autoPlay={true} loop={true} playsInline muted >
                     <source src={require('../../public/images/opening/openingvid.mp4')}/>
                 </video>

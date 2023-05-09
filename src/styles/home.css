@@ -114,6 +114,41 @@
     opacity: 1;
     transition: 0.15s opacity ease-in;
 }
+@media(max-width: 1000px){
+    .carousels{
+        margin: 0 -25px;
+    }
+    .carousels .active .indiana-scroll-container{
+        display: flex;
+        height: 400px;
+        position: relative;
+        width: 100%;
+        align-items: center;
+    }
+    .carousels .active::before, .carousels .active::after{
+        content: "";
+        height: 450px;
+        position: absolute;
+        width: 30px;
+        z-index: 2;
+        background: linear-gradient(to right,  #FAF9F6 0%,rgba(255,255,255,0) 50%);
+    }
+    .carousels .active::after{
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+    .carousels .active::before{
+        left: 0;
+        top: 0;
+    }
+    .carousels .active .indiana-scroll-container img{
+        object-fit: cover;
+        margin: 0 10px;
+        transform: translateY(-400px);
+        animation: cascade 0.6s ease-in-out forwards;
+    }
+}
 @media(max-width: 500px){
     .home{
         margin: 0 25px;
