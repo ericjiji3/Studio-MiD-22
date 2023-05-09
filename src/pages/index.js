@@ -62,6 +62,8 @@ export default function Home() {
                     src={pic.src}
                     width={'250'}
                     height={'340'}
+                    key={pic.id}
+                    alt='oops'
                   />
                 )
               })}
@@ -77,6 +79,8 @@ export default function Home() {
                     src={pic.src}
                     width={'250'}
                     height={'340'}
+                    key={pic.id}
+                    alt='oops'
                   />
                 )
               })}
@@ -92,6 +96,8 @@ export default function Home() {
                     src={pic.src}
                     width={'250'}
                     height={'340'}
+                    key={pic.id}
+                    alt='oops'
                   />
                 )
               })}
@@ -107,6 +113,8 @@ export default function Home() {
                     src={pic.src}
                     width={'250'}
                     height={'340'}
+                    key={pic.id}
+                    alt='oops'
                   />
                 )
               })}
@@ -122,6 +130,8 @@ export default function Home() {
                     src={pic.src}
                     width={'250'}
                     height={'340'}
+                    key={pic.id}
+                    alt='oops'
                   />
                 )
               })}
@@ -137,6 +147,8 @@ export default function Home() {
                     src={pic.src}
                     width={'250'}
                     height={'340'}
+                    key={pic.id}
+                    alt='oops'
                   />
                 )
               })}
@@ -152,6 +164,8 @@ export default function Home() {
                     src={pic.src}
                     width={'250'}
                     height={'340'}
+                    key={pic.id}
+                    alt='oops'
                   />
                 )
               })}
