@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '../../public/mid21.png';
 import { useRouter } from 'next/router';

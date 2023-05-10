@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import {useState, useEffect, useRef} from 'react';
+import Link from 'next/link';
 
 export default function WorkTab(props){
     const [activeImage, setActiveImage] = useState(false);
@@ -43,12 +44,22 @@ export default function WorkTab(props){
                     <span>{props.projectDetails}</span>
                 </div>
                 <div className={activeImage ? 'image-container active' : 'image-container'} ref={imageRef}>
-                    <Image
-                        src={props.image}
-                        width={200}
-                        height={300}
-                        alt="oops"
-                    />
+                    <Link 
+                        href={{
+                            pathname: "Work/[work]",
+                            query: {
+                                title: props.projectName
+                            }
+                        }}
+                        as={`Work/${workId}`}
+                    >
+                        <Image
+                            src={props.image}
+                            width={200}
+                            height={300}
+                            alt="oops"
+                        />
+                    </Link>
                 </div>
                 <div className="triangle">
             </div>
