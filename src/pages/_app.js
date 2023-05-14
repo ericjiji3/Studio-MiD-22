@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import StartingScreen from './StartingScreen';
 import '@/styles/home.css';
 import '@/styles/header.css';
+import '@/styles/works.css';
 import '@/styles/contact.css';
 import '@/styles/carousel.css';
 import '@/styles/about.css';

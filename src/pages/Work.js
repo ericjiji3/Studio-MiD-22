@@ -42,10 +42,10 @@ export default function Work(){
         <div className='work'>
             <motion.div variants={container} initial="hidden" animate="show" exit="exit">
                 <motion.div variants={item}>
-                    <WorkTab projectName="Utility Poles" projectDetails="Mingjian Dan, March 2023" image={utility}/>
+                    <WorkTab projectName="Utility Poles" projectDetails="Mingjian Dan, March 2023" image={utility} workId="utlityPoles"/>
                 </motion.div>
                 <motion.div variants={item}>
-                    <WorkTab projectName="Shadow Studies" projectDetails="Mingjian Dan, August 2020" image={shadow}/>
+                    <WorkTab projectName="Plastic Identity No.1: Open-mindedness is Dislocation" projectDetails="Mingjian Dan, August 2020" image={shadow}/>
                 </motion.div>
                 <motion.div variants={item}>
                     <WorkTab projectName="Plastic Identity" projectDetails="Mingjian Dan, July 2020" image={plastic}/>

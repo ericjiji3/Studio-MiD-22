@@ -1,0 +1,13 @@
+.works{
+    display: flex;
+    position: relative;
+}
+.works .work-container{
+    position: absolute;
+}
+.works .work-container img{
+    opacity: 0;
+}
+.works .work-container.active img{
+    opacity: 1;
+}

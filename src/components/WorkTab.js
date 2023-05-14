@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import {useState, useEffect, useRef} from 'react';
-import Link from 'next/link';
+import Works from "./Works.js";
 
 export default function WorkTab(props){
     const [activeImage, setActiveImage] = useState(false);
-    const [position, setPosition] = useState({x: 0,y: 0})
+    const [activeWork, setActiveWork] = useState(false);
     const imageRef = useRef();
     const tab = useRef();
     
@@ -16,8 +16,6 @@ export default function WorkTab(props){
     }
     function handleFollow(e){
         if(activeImage){
-            console.log(e.clientX, e.clientY);
-            console.log("tab: " + tab.current.offsetTop);
             const image = imageRef.current;
             const localX = e.clientX - tab.current.offsetLeft - image.clientWidth/2;
             const localY = e.clientY - tab.current.offsetTop;
@@ -36,33 +34,26 @@ export default function WorkTab(props){
     //     }, [])
 
     return(
-        
-        <div className={activeImage ? 'work-tab active' : 'work-tab'} onMouseMove={handleFollow} onMouseOver={handleHover} onMouseLeave={handleLeave} ref={tab}>
+        <div className={activeImage ? 'work-tab active' : 'work-tab'} onClick={()=>setActiveWork(true)} onMouseMove={handleFollow} onMouseOver={handleHover} onMouseLeave={handleLeave} ref={tab}>
 
                 <div className="tab-info">
                     <h2>{props.projectName}</h2>
                     <span>{props.projectDetails}</span>
                 </div>
                 <div className={activeImage ? 'image-container active' : 'image-container'} ref={imageRef}>
-                    <Link 
-                        href={{
-                            pathname: "Work/[work]",
-                            query: {
-                                title: props.projectName
-                            }
-                        }}
-                        as={`Work/${workId}`}
-                    >
+                    
                         <Image
                             src={props.image}
                             width={200}
                             height={300}
                             alt="oops"
                         />
-                    </Link>
+                    
                 </div>
-                <div className="triangle">
-            </div>
+                <div className="triangle"></div>
+                <div className={activeWork ? "modal active" : "modal"}>
+                    <Works workName={props.projectName}></Works>
+                </div>
         </div>
     )
 }
