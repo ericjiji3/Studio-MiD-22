@@ -4,7 +4,6 @@ import Works from "./Works.js";
 
 export default function WorkTab(props){
     const [activeImage, setActiveImage] = useState(false);
-    const [activeWork, setActiveWork] = useState(false);
     const imageRef = useRef();
     const tab = useRef();
     
@@ -34,7 +33,7 @@ export default function WorkTab(props){
     //     }, [])
 
     return(
-        <div className={activeImage ? 'work-tab active' : 'work-tab'} onClick={()=>setActiveWork(true)} onMouseMove={handleFollow} onMouseOver={handleHover} onMouseLeave={handleLeave} ref={tab}>
+        <div className={activeImage ? 'work-tab active' : 'work-tab'} onMouseMove={handleFollow} onMouseOver={handleHover} onMouseLeave={handleLeave} ref={tab}>
 
                 <div className="tab-info">
                     <h2>{props.projectName}</h2>
@@ -51,9 +50,6 @@ export default function WorkTab(props){
                     
                 </div>
                 <div className="triangle"></div>
-                <div className={activeWork ? "modal active" : "modal"}>
-                    <Works workName={props.projectName}></Works>
-                </div>
         </div>
     )
 }

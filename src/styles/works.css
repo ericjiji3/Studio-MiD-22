@@ -1,13 +1,38 @@
 .works{
-    display: flex;
-    position: relative;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #64646461;
+    display: none;
 }
-.works .work-container{
+.works.active{
+    display: unset;
+}
+.works .modal{
+    width: 500px;
+    height: 600px;
+    margin: auto;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.works .work-container img{
+.works .modal .work-container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     opacity: 0;
+    top: 25px;
 }
-.works .work-container.active img{
+.works .modal .work-container.active{
     opacity: 1;
+}
+.works .modal .buttons{
+    bottom: 25px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
 }

@@ -59,9 +59,13 @@
     transition: border-color 0.2s ease-in;
 }
 .work-tab .modal{
-    opacity: 0;
-    position: absolute;
+    display: none;
 }
 .work-tab .modal.active{
-    opacity: 1;
+    display: block;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    height: 100vh;
+    top: 0;
 }
