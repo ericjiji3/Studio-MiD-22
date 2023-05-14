@@ -27,6 +27,9 @@
     opacity: 0;
     top: 25px;
 }
+.works .modal .work-container img{
+    object-fit: cover;
+}
 .works .modal .work-container.active{
     opacity: 1;
 }

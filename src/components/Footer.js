@@ -21,7 +21,7 @@ export default function Footer(){
                         alt="oops"
                     />
                 </a>
-                <a href="https://www.instagram.com/v3ganghouse/">
+                <a href="https://www.youtube.com/@MiD22Podcast">
                     <Image
                         src={podcast}
                         width={25}

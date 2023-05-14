@@ -3,6 +3,7 @@ import headshot2 from '../../public/images/headshots/headshot-2.jpg';
 import headshot3 from '../../public/images/headshots/headshot-3.jpg';
 import headshot4 from '../../public/images/headshots/headshot-4.jpg';
 import headshot5 from '../../public/images/headshots/headshot-5.jpg';
+import headshot6 from '../../public/images/headshots/headshot-6.jpg';
 
 const headshots = [
     {
@@ -25,6 +26,10 @@ const headshots = [
         id: 4,
         src: headshot5
     },
+    {
+        id: 5,
+        src: headshot6
+    }
 ]
 
 export default headshots;

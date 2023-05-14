@@ -1,20 +1,17 @@
-import grad1 from '../../public/images/grad/grad-1.jpg';
-import grad2 from '../../public/images/grad/grad-2.jpg';
-import grad3 from'../../public/images/grad/grad-3.jpg';
-import grad4 from '../../public/images/grad/grad-4.jpg';
-import grad5 from'../../public/images/grad/grad-5.jpg';
-import grad6 from '../../public/images/grad/grad-6.jpg';
-import grad7 from'../../public/images/grad/grad-7.jpg';
-import grad8 from '../../public/images/grad/grad-8.jpg';
-import grad9 from'../../public/images/grad/grad-9.jpg';
-import grad10 from '../../public/images/grad/grad-10.jpg';
-import grad11 from '../../public/images/grad/grad-11.jpg';
-import grad12 from '../../public/images/grad/grad-12.jpg';
-import grad15 from'../../public/images/grad/grad-15.jpg';
-import grad18 from'../../public/images/grad/grad-18.jpg';
-import grad19 from'../../public/images/grad/grad-19.jpg';
-import grad20 from'../../public/images/grad/grad-20.jpg';
-import grad21 from'../../public/images/grad/grad-21.jpg';
+import grad1 from '../../public/images/grad/danaegrad-059.jpg';
+import grad2 from '../../public/images/grad/danaegrad-096.jpg';
+import grad3 from'../../public/images/grad/enrique.jpg';
+import grad4 from '../../public/images/grad/grad.jpg';
+import grad5 from'../../public/images/grad/Ilana-11.jpg';
+import grad6 from '../../public/images/grad/P1255060.jpg';
+import grad7 from'../../public/images/grad/P1255431.jpg';
+import grad8 from '../../public/images/grad/P1257582.jpg';
+import grad9 from'../../public/images/grad/P1322294.jpg';
+import grad10 from '../../public/images/grad/P1366393.jpg';
+import grad11 from '../../public/images/grad/P1377878.jpg';
+import grad12 from '../../public/images/grad/P1388588.jpg';
+import grad13 from'../../public/images/grad/sam-25.jpg';
+import grad14 from'../../public/images/grad/zoe-34.jpg';
 
 const grads = [
     {
@@ -66,24 +63,12 @@ const grads = [
         src: grad12
     },
     {
-        id: 14,
-        src: grad15
+        id: 12,
+        src: grad13
     },
     {
-        id: 17,
-        src: grad18
-    },
-    {
-        id: 18,
-        src: grad19
-    },
-    {
-        id: 19,
-        src: grad20
-    },
-    {
-        id: 20,
-        src: grad21
+        id: 13,
+        src: grad14
     }
 ]
 
