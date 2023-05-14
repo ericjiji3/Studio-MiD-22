@@ -27,22 +27,24 @@ export default function Works(props){
                     <span onClick={()=>{prev(shadows1)}}>left</span>
                     <span>right</span>
                 </div>
-                {/* <h2>{props.workName}</h2> */}
-                {
-                    shadows1.map((work, key) => {
-                        console.log(work);
-                        return(
-                            <div className={index==key ? 'work-container active' : 'work-container'} data-key={key}>
-                                <Image 
-                                    src={work.src}
-                                    width={300}
-                                    height={500}
-                                    alt="oops"
-                                />
-                            </div>
-                        )
-                    })
-                }
+                <div className="works-container">
+                    {
+                        shadows1.map((work, key) => {
+                            console.log(work);
+                            return(
+                                <div className={index==key ? 'work-container active' : 'work-container'} data-key={key}>
+                                    <Image 
+                                        src={work.src}
+                                        width={300}
+                                        height={500}
+                                        alt="oops"
+                                    />
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+                
             </div>
         )
     }
