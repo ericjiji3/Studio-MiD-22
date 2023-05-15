@@ -260,7 +260,7 @@ export default function Home() {
                 <h2 className={activeGallery==='Fashion' ? 'select-text active' : 'select-text'}>Fashion</h2>
               </li>
               <li onClick={() => selectGallery('Headshots')}>
-                <h2 className={activeGallery==='Headshots' ? 'select-text active' : 'select-text'}>Headshots</h2>
+                <h2 className={activeGallery==='Headshots' ? 'select-text active' : 'select-text'}>Studio Headshots</h2>
               </li>
             </ul>
             </motion.div>
