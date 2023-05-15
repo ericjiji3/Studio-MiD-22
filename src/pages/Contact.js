@@ -20,8 +20,8 @@ export default function Contact(){
             
             <div className="left">
             <motion.div initial={{opacity: 0, x: -1000}} animate={{opacity: 1, x: 0}} exit={{opacity: 0, x: -1000}} transition={{duration: 0.75}}>
-                <h2 className="title">Let's create something cool together.</h2>
-                <h2 className="subtitle">Tell us when you're available and we'll respond within 24 hours!</h2>
+                <h2 className="title">Let&apos;s create something cool together.</h2>
+                <h2 className="subtitle">Tell us when you&apos;re available and we&apos;ll respond within 24 hours!</h2>
                 <form className="form-container">
                     <div className='inputs'>
                         <input className="text-input" autocomplete="name" placeholder="Name" type="text" name="your-name"/>
