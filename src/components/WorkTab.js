@@ -14,13 +14,20 @@ export default function WorkTab(props){
         setActiveImage(false); 
     }
     function handleFollow(e){
+        e.preventDefault();
         if(activeImage){
             const image = imageRef.current;
             const localX = e.clientX - tab.current.offsetLeft - image.clientWidth/2;
             const localY = e.clientY - tab.current.offsetTop;
-            image.style.left = localX + 'px';
-            image.style.top = localY - image.clientHeight/3 + 'px';
-            const imagePos = e.clientY  + image.clientHeight/2;
+            const x = localX + 30;
+            const y = localY - image.clientHeight/2;
+            image.animate({
+                left: x + 'px',
+                top: y + 'px'
+            },{duration: 3000, fill: 'forwards'})
+            // image.style.left = localX + 30 + 'px';
+            // image.style.top = localY - image.clientHeight/2 + 'px';
+            // const imagePos = e.clientY  + image.clientHeight/2;
             // image.style.transform = 'translateY(-' + image.clientHeight + 'px)';
         }
     }
