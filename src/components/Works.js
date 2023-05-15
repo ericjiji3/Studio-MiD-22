@@ -49,7 +49,7 @@ export default function Works(props){
                         shadows1.map((work, key) => {
                             console.log(work);
                             return(
-                                <div className={index==key ? 'work-container active' : 'work-container'} data-key={key}>
+                                <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
                                     <Image 
                                         src={work.src}
                                         width={300}
@@ -76,7 +76,7 @@ export default function Works(props){
                         utility.map((work, key) => {
                             console.log(work);
                             return(
-                                <div className={index==key ? 'work-container active' : 'work-container'} data-key={key}>
+                                <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
                                     <Image 
                                         src={work.src}
                                         width={300}
@@ -103,7 +103,7 @@ export default function Works(props){
                         shadows2.map((work, key) => {
                             console.log(work);
                             return(
-                                <div className={index==key ? 'work-container active' : 'work-container'} data-key={key}>
+                                <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
                                     <Image 
                                         src={work.src}
                                         width={300}
@@ -130,7 +130,7 @@ export default function Works(props){
                         shadows3.map((work, key) => {
                             console.log(work);
                             return(
-                                <div className={index==key ? 'work-container active' : 'work-container'} data-key={key}>
+                                <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
                                     <Image 
                                         src={work.src}
                                         width={300}
@@ -157,7 +157,7 @@ export default function Works(props){
                         plasticIdentity.map((work, key) => {
                             console.log(work);
                             return(
-                                <div className={index==key ? 'work-container active' : 'work-container'} data-key={key}>
+                                <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
                                     <Image 
                                         src={work.src}
                                         width={300}
@@ -184,7 +184,7 @@ export default function Works(props){
                         plasticIdentity2.map((work, key) => {
                             console.log(work);
                             return(
-                                <div className={index==key ? 'work-container active' : 'work-container'} data-key={key}>
+                                <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
                                     <Image 
                                         src={work.src}
                                         width={300}
