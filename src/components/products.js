@@ -26,10 +26,10 @@ const products = [
         id: 4,
         src: product4
     },
-    {
-        id: 5,
-        src: product5
-    },
+    // {
+    //     id: 5,
+    //     src: product5
+    // },
     {
         id: 6,
         src: product6
