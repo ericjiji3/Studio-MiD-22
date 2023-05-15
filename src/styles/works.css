@@ -4,7 +4,7 @@
     height: 100vh;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 4;
     background-color: #64646461;
     display: none;
 }
@@ -12,8 +12,8 @@
     display: unset;
 }
 .works .modal{
-    width: 500px;
-    height: 600px;
+    width: 425px;
+    height: 675px;
     margin: auto;
     position: absolute;
     top: 50%;
@@ -25,17 +25,36 @@
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
-    top: 25px;
+    top: 10px;
+    
 }
 .works .modal .work-container img{
     object-fit: cover;
+    border-radius: 5px;
 }
 .works .modal .work-container.active{
     opacity: 1;
 }
+.works .modal .close{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -9px;
+    left: -6px;
+    z-index: 2;
+}
 .works .modal .buttons{
-    bottom: 25px;
+    bottom: 5px;
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
+}
+.works .modal .buttons img{
+    margin: 0 15px;
+}
+.works .modal .buttons img:hover{
+    cursor: pointer;
+}
+.works .modal .buttons .prev{
+    transform: rotate(180deg);
 }

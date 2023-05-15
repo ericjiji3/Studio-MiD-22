@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Ming from '../../public/images/about/ming.jpg';
 import Michelle from '../../public/images/about/michelle.jpg';
+import Eric from '../../public/images/about/eric.jpeg';
 import { motion,AnimatePresence } from "framer-motion";
 
 export default function About(){
@@ -12,7 +13,7 @@ export default function About(){
     exit={{ y: 300, opacity: 0 }}
     transition={{
       type: "spring",
-      stiffness: 260,
+      stiffness: 100,
       damping: 20,
     }}
   >
@@ -39,6 +40,19 @@ export default function About(){
                     <span>Co-Owner</span>
                     <div className="content">
                         <span>Known as a jack of all trades as a child, Michelle Ngo, our Founder was always busy entertaining her never-ending interests from tennis, dance, and swim to piano, theatre, and sewing. However, through it all, her deepest passions remained in creating art and music. She went on to earn her Bachelor’s in Early Childhood Special Education at Texas Christian University, but has always said her real learning began after that. Postgrad, she moved abroad to Spain, where she got the chance to learn about the world and do some soul-searching first hand through her travels. These experiences inspired her to live a life that would set her free, which led her to pursue her music career as “Thuy Vi” a Singer-Songwriter and to the startup of her first business with her best friend, Ming. Through Mid22, she aims to connect with like-minded artists to foster a loving, supportive, & collaborative community, while maintaining a personal goal of continually developing her creativity every day.</span>
+                    </div>
+                </div>
+            </div>
+            <div className="profile eric">
+                <div className="image-container">
+                    <Image src={Eric} width={700} height={500} alt="oops"/>
+                </div>
+                
+                <div className="text-container">
+                    <h2>Eric Ji</h2>
+                    <span>Web</span>
+                    <div className="content">
+                        <span>You may be thinking, “Wow! This website looks great!”, well you can thank our Website Developer, Eric Ji, for that! As a child, he was a self proclaimed nerd spending most of his time playing video games like Minecraft and League of Legend and training competitively in Tennis with Michelle. Later on, our designated smartypants earned his Bachelor’s in Neuroscience with a minor in Computer Science at the University of Texas, meeting Ming along the way. Postgrad, he decided to pursue a career in Website development, inspired by the cool visuals and designs of his favorite childhood video games. He continues to stay motivated by the idea of being able to use his passion of website design to bring his client’s visions to life and to showcase what they love to do. He is excited to work in collaboration with his friends to bring Mid22 to life and to you.</span>
                     </div>
                 </div>
             </div>

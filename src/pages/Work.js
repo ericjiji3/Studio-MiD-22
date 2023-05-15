@@ -17,13 +17,13 @@ export default function Work(){
         show: {
           opacity: 1,
           transition: {
-            staggerChildren: 0.4,
+            staggerChildren: 0.25,
           }
         },
         exit: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.3,
+                staggerChildren: 0.25,
               }
         }
       }
@@ -49,6 +49,7 @@ export default function Work(){
     const closeModal = (modalData) => {
         setActiveWork(modalData);
     }
+
     return(
         <div className='work'>
             <motion.div variants={container} initial="hidden" animate="show" exit="exit">
@@ -59,16 +60,16 @@ export default function Work(){
                     <WorkTab projectName="Shadow Study #1" projectDetails="Mingjian Dan, August 2020" image={shadow1}/>
                 </motion.div>
                 <motion.div variants={item} onClick={()=>setActiveWork('SS2')}>
-                    <WorkTab projectName="Shadow Study #2" projectDetails="Mingjian Dan, July 2020" image={shadow2}/>
+                    <WorkTab projectName="Shadow Study #2" projectDetails="Mingjian Dan, February 2022" image={shadow2}/>
                 </motion.div>
                 <motion.div variants={item} onClick={()=>setActiveWork('SS3')}>
-                    <WorkTab projectName="Shadow Study #3" projectDetails="Mingjian Dan, July 2020" image={shadow3}/>
+                    <WorkTab projectName="Shadow Study #3" projectDetails="Mingjian Dan, May 2023" image={shadow3}/>
                 </motion.div>
                 <motion.div variants={item} onClick={()=>setActiveWork('PI1')}>
                     <WorkTab projectName="Plastic Identity No.1: Open-mindedness is Dislocation" projectDetails="Mingjian Dan, July 2020" image={plastic}/>
                 </motion.div>      
                 <motion.div variants={item} onClick={()=>setActiveWork('PI2')}>
-                    <WorkTab projectName="Plastic Identity No. 2: Preservation = Suffocation" projectDetails="Mingjian Dan, July 2020" image={plastic2}/>
+                    <WorkTab projectName="Plastic Identity No. 2: Preservation = Suffocation" projectDetails="Mingjian Dan, April 2023" image={plastic2}/>
                 </motion.div>      
             </motion.div>
             <WorkModal workName={activeWork} closeModal={closeModal}></WorkModal>

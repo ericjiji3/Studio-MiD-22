@@ -7,6 +7,7 @@ export default function WorkTab(props){
     const imageRef = useRef();
     const tab = useRef();
     
+
     function handleHover(e){
         setActiveImage(true);
     }
@@ -15,6 +16,7 @@ export default function WorkTab(props){
     }
     function handleFollow(e){
         e.preventDefault();
+        setActiveImage(true);
         if(activeImage){
             const image = imageRef.current;
             const localX = e.clientX - tab.current.offsetLeft - image.clientWidth/2;
@@ -31,16 +33,9 @@ export default function WorkTab(props){
             // image.style.transform = 'translateY(-' + image.clientHeight + 'px)';
         }
     }
-    // useEffect(() => {
-    //         const image = imageRef.current;
-    //         if(activeImage){
-    //             console.log('huh: ' + position.x + ' ' + position.y);
-    //         }
-            
-    //     }, [])
-
+    // onMouseOver={handleHover}
     return(
-        <div className={activeImage ? 'work-tab active' : 'work-tab'} onMouseMove={handleFollow} onMouseOver={handleHover} onMouseLeave={handleLeave} ref={tab}>
+        <div className={activeImage ? 'work-tab active' : 'work-tab'} onMouseMove={handleFollow} onMouseLeave={handleLeave} ref={tab}>
 
                 <div className="tab-info">
                     <h2>{props.projectName}</h2>

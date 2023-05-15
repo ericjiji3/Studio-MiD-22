@@ -6,6 +6,8 @@ import plasticIdentity from './creativeWorks/plastic.js';
 import plasticIdentity2 from './creativeWorks/plastic2.js';
 import Image from 'next/image';
 import {useState, useEffect, useRef} from 'react';
+import arrow from '../../public/images/arrow.png';
+import close from '../../public/images/close.png';
 
 export default function Works(props){
     const [index, setIndex] = useState(0);
@@ -40,11 +42,16 @@ export default function Works(props){
             setIndex(0);
         }
     }
+    function closeButton(){
+        setActive(false);
+        props.closeModal('');
+        setIndex(0);
+    }
     if(props.workName == "SS1"){
         return(
             <div className={active ? "works active" : "works"} onClick={(e)=>closeModal(e)}>
                 <div className="modal" ref={innerMod}>
-                    
+                    <Image className="close" onClick={()=>closeButton()} src={close} alt="oops"/>
                     {
                         shadows1.map((work, key) => {
                             console.log(work);
@@ -52,8 +59,8 @@ export default function Works(props){
                                 <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
                                     <Image 
                                         src={work.src}
-                                        width={300}
-                                        height={500}
+                                        width={400}
+                                        height={600}
                                         alt="oops"
                                     />
                                 </div>
@@ -61,8 +68,8 @@ export default function Works(props){
                         })
                     }
                     <div className="buttons">
-                        <span onClick={()=>{prev(shadows1)}}>left</span>
-                        <span onClick={()=>{next(shadows1)}}>right</span>
+                        <Image className="prev" onClick={()=>{prev(shadows1)}} src={arrow} alt="oops"/>
+                        <Image className="next" onClick={()=>{next(shadows1)}} src={arrow} alt="oops"/>
                     </div>
                 </div>
             </div>
@@ -71,7 +78,7 @@ export default function Works(props){
         return(
             <div className={active ? "works active" : "works"} onClick={(e)=>closeModal(e)}>
                 <div className="modal" ref={innerMod}>
-                    
+                <Image className="close" onClick={()=>closeButton()} src={close} alt="oops"/>
                     {
                         utility.map((work, key) => {
                             console.log(work);
@@ -79,8 +86,8 @@ export default function Works(props){
                                 <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
                                     <Image 
                                         src={work.src}
-                                        width={300}
-                                        height={500}
+                                        width={400}
+                                        height={600}
                                         alt="oops"
                                     />
                                 </div>
@@ -88,8 +95,8 @@ export default function Works(props){
                         })
                     }
                     <div className="buttons">
-                        <span onClick={()=>{prev(utility)}}>left</span>
-                        <span onClick={()=>{next(utility)}}>right</span>
+                        <Image className="prev" onClick={()=>{prev(shadows1)}} src={arrow} alt="oops"/>
+                        <Image className="next" onClick={()=>{next(shadows1)}} src={arrow} alt="oops"/>
                     </div>
                 </div>
             </div>
@@ -98,7 +105,7 @@ export default function Works(props){
         return(
             <div className={active ? "works active" : "works"} onClick={(e)=>closeModal(e)}>
                 <div className="modal" ref={innerMod}>
-                    
+                <Image className="close" onClick={()=>closeButton()} src={close} alt="oops"/>
                     {
                         shadows2.map((work, key) => {
                             console.log(work);
@@ -106,8 +113,8 @@ export default function Works(props){
                                 <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
                                     <Image 
                                         src={work.src}
-                                        width={300}
-                                        height={500}
+                                        width={400}
+                                        height={600}
                                         alt="oops"
                                     />
                                 </div>
@@ -115,8 +122,8 @@ export default function Works(props){
                         })
                     }
                     <div className="buttons">
-                        <span onClick={()=>{prev(shadows2)}}>left</span>
-                        <span onClick={()=>{next(shadows2)}}>right</span>
+                        <Image className="prev" onClick={()=>{prev(shadows1)}} src={arrow} alt="oops"/>
+                        <Image className="next" onClick={()=>{next(shadows1)}} src={arrow} alt="oops"/>
                     </div>
                 </div>
             </div>
@@ -125,7 +132,7 @@ export default function Works(props){
         return(
             <div className={active ? "works active" : "works"} onClick={(e)=>closeModal(e)}>
                 <div className="modal" ref={innerMod}>
-                    
+                <Image className="close" onClick={()=>closeButton()} src={close} alt="oops"/>
                     {
                         shadows3.map((work, key) => {
                             console.log(work);
@@ -133,8 +140,8 @@ export default function Works(props){
                                 <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
                                     <Image 
                                         src={work.src}
-                                        width={300}
-                                        height={500}
+                                        width={400}
+                                        height={600}
                                         alt="oops"
                                     />
                                 </div>
@@ -142,8 +149,8 @@ export default function Works(props){
                         })
                     }
                     <div className="buttons">
-                        <span onClick={()=>{prev(shadows3)}}>left</span>
-                        <span onClick={()=>{next(shadows3)}}>right</span>
+                        <Image className="prev" onClick={()=>{prev(shadows1)}} src={arrow} alt="oops"/>
+                        <Image className="next" onClick={()=>{next(shadows1)}} src={arrow} alt="oops"/>
                     </div>
                 </div>
             </div>
@@ -152,7 +159,7 @@ export default function Works(props){
         return(
             <div className={active ? "works active" : "works"} onClick={(e)=>closeModal(e)}>
                 <div className="modal" ref={innerMod}>
-                    
+                <Image className="close" onClick={()=>closeButton()} src={close} alt="oops"/>
                     {
                         plasticIdentity.map((work, key) => {
                             console.log(work);
@@ -160,8 +167,8 @@ export default function Works(props){
                                 <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
                                     <Image 
                                         src={work.src}
-                                        width={300}
-                                        height={500}
+                                        width={400}
+                                        height={600}
                                         alt="oops"
                                     />
                                 </div>
@@ -169,8 +176,8 @@ export default function Works(props){
                         })
                     }
                     <div className="buttons">
-                        <span onClick={()=>{prev(plasticIdentity)}}>left</span>
-                        <span onClick={()=>{next(plasticIdentity)}}>right</span>
+                        <Image className="prev" onClick={()=>{prev(shadows1)}} src={arrow} alt="oops"/>
+                        <Image className="next" onClick={()=>{next(shadows1)}} src={arrow} alt="oops"/>
                     </div>
                 </div>
             </div>
@@ -179,7 +186,7 @@ export default function Works(props){
         return(
             <div className={active ? "works active" : "works"} onClick={(e)=>closeModal(e)}>
                 <div className="modal" ref={innerMod}>
-                    
+                <Image className="close" onClick={()=>closeButton()} src={close} alt="oops"/>
                     {
                         plasticIdentity2.map((work, key) => {
                             console.log(work);
@@ -187,8 +194,8 @@ export default function Works(props){
                                 <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
                                     <Image 
                                         src={work.src}
-                                        width={300}
-                                        height={500}
+                                        width={400}
+                                        height={600}
                                         alt="oops"
                                     />
                                 </div>
@@ -196,8 +203,8 @@ export default function Works(props){
                         })
                     }
                     <div className="buttons">
-                        <span onClick={()=>{prev(plasticIdentity2)}}>left</span>
-                        <span onClick={()=>{next(plasticIdentity2)}}>right</span>
+                        <Image className="prev" onClick={()=>{prev(shadows1)}} src={arrow} alt="oops"/>
+                        <Image className="next" onClick={()=>{next(shadows1)}} src={arrow} alt="oops"/>
                     </div>
                 </div>
             </div>

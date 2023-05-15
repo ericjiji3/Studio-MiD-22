@@ -7,14 +7,25 @@
     z-index: 1;
 }
 .contact .left{
-    width: 65%;
+    width: 100%;
 }
-.contact .left h2{
+.contact .left .title{
+    font-size: 35px;
+}
+.contact .left .subtitle{
     font-family: 'Switzer ExtraLight';
     padding-right: 75px;
+    font-size: 25px;
 }
 .contact .left .form-container{
     margin-top: 100px;
+    display: flex;
+    padding: 25px 50px;
+    border: 2px solid #000000;
+    box-shadow: 10px 10px 0px #000000;
+}
+.contact .left .form-container .inputs{
+    width: 100%;
 }
 .contact .left .form-container .text-input{
     border-top-style: hidden;
@@ -26,9 +37,16 @@
     color: #000000;
     display: block;
     margin: 25px 0;
+    width: 100%;
 }
 .contact .left .form-container .text-input:focus{
     outline: none;
+}
+.contact .left .form-container .form-pic{
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+    /* clip-path: polygon(100% 29%, 49% 100%, 100% 100%); */
 }
 .contact .left .form-container .submit-button{
     font-family: 'Switzer Light';
@@ -40,6 +58,7 @@
     border-radius: 15px;
     padding: 12px;
     margin-top: 30px;
+    margin-bottom: 25px;
 }
 .contact .right{
     width: 35%;
