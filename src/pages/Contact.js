@@ -38,7 +38,7 @@ export default function Contact(){
                         onChange={setValue}
                         multiple={true}
                         plugins={[
-                            <DatePanel sort="date" />
+                            <DatePanel sort="date" key={1}/>
                           ]}
                         />
                         <button className="submit-button" type="submit">Submit</button>
