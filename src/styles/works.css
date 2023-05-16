@@ -58,3 +58,9 @@
 .works .modal .buttons .prev{
     transform: rotate(180deg);
 }
+@media(max-width: 1500px){
+    .work{
+        /* margin: 0 25px;
+        padding-top: 60px; */
+    }   
+}
