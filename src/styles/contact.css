@@ -18,14 +18,15 @@
     font-size: 25px;
 }
 .contact .left .form-container{
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     padding: 25px 50px;
     border: 2px solid #000000;
     box-shadow: 10px 10px 0px #000000;
+    position: relative;
 }
 .contact .left .form-container .inputs{
-    width: 100%;
+    width: 50%;
 }
 .contact .left .form-container .text-input{
     border-top-style: hidden;
@@ -42,11 +43,19 @@
 .contact .left .form-container .text-input:focus{
     outline: none;
 }
-.contact .left .form-container .form-pic{
+.contact .left .form-container .form-pic-container{
     width: 50%;
-    height: 400px;
+}
+.contact .left .form-container .form-pic-container .form-pic{
+    width: 50%;
+    height: 100%;
     object-fit: cover;
-    /* clip-path: polygon(100% 29%, 49% 100%, 100% 100%); */
+    object-position: 100% 10%;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
 }
 .contact .left .form-container .submit-button{
     font-family: 'Switzer Light';
@@ -59,42 +68,41 @@
     padding: 12px;
     margin-top: 30px;
     margin-bottom: 25px;
+    width: 30%;
 }
-.contact .right{
-    width: 35%;
+.contact .left .form-container .calendar-header{
+    margin-bottom: 10px;
 }
-/* Description part of calendly */
-.contact .right .calender-cover{
-    position: relative;
-    background-color: black;
+.contact .left .form-container .rmdp-shadow{
+    box-shadow: none;
+    border: 2px solid #000000;
 }
-.contact .right .calender-cover img{
-    /* background-image: url('/public/images/opening/opening-04.jpg'); */
-    object-fit: cover;
-    margin-bottom: -5px;
-    width: 100%;
+.contact .left .form-container .rmdp-wrapper{
+    border-radius: 0;
+    background-color: #faf9f6;
 }
-.contact .right .calender-cover h2{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #faf9f6;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+.contact .left .form-container .rmdp-wrapper .rmdp-arrow{
+    border: solid #000000;
+    border-width: 0 2px 2px 0;
 }
-.contact .right .calendly-inline-widget{
-    width: 100%;
-
+.contact .left .form-container .rmdp-wrapper .rmdp-week-day{
+    color: #000000;
+}
+.contact .left .form-container .rmdp-wrapper .rmdp-day.rmdp-selected span:not(.highlight){
+    background-color: #000000;
+}
+.contact .left .form-container .rmdp-wrapper .rmdp-day.rmdp-today span{
+    background-color: #878787;
+}
+.contact .left .form-container .rmdp-wrapper .rmdp-day:not(.rmdp-disabled):not(.rmdp-day-hidden) span:hover{
+    background-color: #878787;
+}
+.contact .left .form-container .rmdp-wrapper .rmdp-panel-body li{
+    background-color: #000000;
 }
 @media(max-width: 1500px){
-    .contact .left{
-        width: 60%;
-    }
-    .contact .left .form-container{
-        margin-top: 50px;
-    }
-    .contact .right{
-        width: 40%;
+    .contact .left .form-container .form-pic-container .form-pic{
+        object-position: 40% 10%;
     }
 }
 @media(max-width: 500px){
@@ -106,7 +114,7 @@
         padding-top: 60px;
         margin-top: 0;
     }
-    .contact .left, .contact .right{
+    .contact .left{
         width: 100%;
         /* order: 2; */
         margin-top: 15px;
@@ -116,9 +124,9 @@
         /* position: absolute;
         top: 0; */
     }
-    /* .contact .left .form-container{
-        margin-top: -75px;
-    } */
+    .contact .left .form-container{
+        padding: 25px 8px;
+    }
     .contact .left .form-container .text-input{
         width: 100%;
     }
@@ -126,11 +134,7 @@
         width: 100%;
         margin-top: 0px;
     }
-    .contact .right{
-        /* order: 1; */
-        margin-top: 75px;
-        margin-bottom: -50px;
-        position: relative;
-        z-index:0;
+    .contact .left .form-container .form-pic-container{
+        display: none;
     }
 }
