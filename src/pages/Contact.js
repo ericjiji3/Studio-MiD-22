@@ -1,19 +1,19 @@
 import {useEffect, useRef} from 'react';
 import Head from 'next/head';
 import React from "react";
-import { InlineWidget } from "react-calendly";
 import cover from '../../public/images/opening/opening-04.jpg';
 import Image from 'next/image';
 import { motion,AnimatePresence } from "framer-motion";
 import formpic from '../../public/images/opening/opening-05.jpg';
 import { useState } from "react";
-import {DatePicker, Calendar} from "react-multi-date-picker";
+import {DatePicker, Calendar, DateObject} from "react-multi-date-picker";
 import DatePanel from "react-multi-date-picker/plugins/date_panel";
 import emailjs from '@emailjs/browser';
 
 export default function Contact(){
+    const date = new DateObject();
     const [dates, setDates] = useState(new Date());
-
+    
     const buttonRef = useRef(null);
 
     const [name, setName] = useState("");
@@ -60,20 +60,36 @@ export default function Contact(){
         setEmailErr(false);
         setPhoneErr(false);
 
+        var availibility = "";
+        console.log(Array.isArray(dates));
+        console.log(dates);
+        if(Array.isArray(dates)){
+            for(const date in dates){
+                console.log("weekday: " + dates[date].weekDay.shortName);
+                console.log("month: " + dates[date].month.shortName);
+                console.log("day: " + dates[date].day);
+                console.log("year: " + dates[date].year); 
+                var availableDate = `\n ${dates[date].weekDay.shortName} ${dates[date].month.shortName} ${dates[date].day} ${dates[date].year}`;
+                availibility += new String(availableDate);
+            }
+        }else{
+            var singleDate = new String(dates);
+            console.log(singleDate.substring(0,15));
+            availibility += new String(singleDate.substring(0,15));
+        }
+
         var data = {
             'name' : name,
             'project' : project,
             'phone' : phone,
             'email' : email,
-            'availibility' : dates
+            'availibility' : availibility
         }
-        for(const date in data['availibility']){
-            console.log(date.year);
-        }
-        
+
+        console.log(data);
         if(validateFields(data)){
             buttonRef.current.classList.add('loading');
-            emailjs.sendForm('service_7gh8q8j', 'template_6oqmh07', e.target, 'y1Y--zncppiwqV9Le')
+            emailjs.send('service_7gh8q8j', 'template_6oqmh07', data, 'y1Y--zncppiwqV9Le')
             .then((result) => {
                 buttonRef.current.classList.remove('loading');
                 buttonRef.current.classList.add('success');
@@ -94,9 +110,6 @@ export default function Contact(){
     }
     return(
         <>
-        <Head>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        </Head>
         <div className="contact">
             
             <div className="left">
