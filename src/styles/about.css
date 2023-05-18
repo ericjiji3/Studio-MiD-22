@@ -52,13 +52,16 @@
         height: 550px;
     }
 }
-@media(max-width: 500px){
+@media(max-width: 1200px){
     .about{
         margin-left: 25px;
         margin-right: 25px;
         padding-top: 100px;
         margin-top: 0;
     }
+}
+@media(max-width: 500px){
+
     .about .profile{
         display: block!important;
     }

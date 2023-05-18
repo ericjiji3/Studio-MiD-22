@@ -28,7 +28,7 @@
 .contact .left .form-container .inputs{
     width: 50%;
 }
-.contact .left .form-container .text-input{
+.contact .left .form-container .text-input:first-child{
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
@@ -39,7 +39,23 @@
     display: block;
     margin: 25px 0;
     width: 100%;
+    border-bottom: 2px solid #000000;
+    
 }
+.contact .left .form-container .text-input{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    background-color: #faf9f6;
+    font-family: 'Switzer Light';
+    font-size: 30px;
+    color: #000000;
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #000000;
+    margin: 50px 0;
+}
+
 .contact .left .form-container .text-input:focus{
     outline: none;
 }
@@ -51,27 +67,40 @@
     height: 100%;
     object-fit: cover;
     object-position: 100% 10%;
-    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
     position: absolute;
     bottom: 0;
     right: 0;
-    
 }
 .contact .left .form-container .submit-button{
     font-family: 'Switzer Light';
     font-size: 30px;
     background-color: #000000;
     color: #faf9f6;
-    border: none; 
+    border: 1.5px solid #000000; 
     outline: none;
     border-radius: 15px;
     padding: 12px;
     margin-top: 30px;
     margin-bottom: 25px;
     width: 30%;
+    transition: all 0.15s ease-in-out;
+}
+.contact .left .form-container .submit-button:hover{
+    cursor: pointer;
+    background-color: #FAF9F6;
+    color: #000000;
+    transition: all 0.15s ease-in-out;
+}
+.contact .left .form-container .calendar-container{
+    position: relative;
+    z-index: 2;
+    margin: 25px auto;
+    width: fit-content;
 }
 .contact .left .form-container .calendar-header{
     margin-bottom: 10px;
+    border-bottom: 2px solid #000000;
 }
 .contact .left .form-container .rmdp-shadow{
     box-shadow: none;
@@ -101,19 +130,56 @@
     background-color: #000000;
 }
 @media(max-width: 1500px){
+    .contact .left .form-container{
+        flex-wrap: wrap;
+    }
     .contact .left .form-container .form-pic-container .form-pic{
         object-position: 40% 10%;
     }
+    .contact .left .form-container .calendar-container{
+        margin: 25px 0;
+        float: right;
+    }
 }
-@media(max-width: 500px){
+@media(max-width: 1200px){
     .contact{
         margin-left: 25px;
         margin-right: 25px;
         flex-wrap: wrap;
         position: relative;
-        padding-top: 60px;
+        padding-top: 80px;
         margin-top: 0;
     }
+    .contact .left .form-container .inputs{
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        height: 100%;
+    }
+    .contact .left .form-container .form-pic-container{
+        position: absolute;
+        top: 290px;
+    }
+    .contact .left .form-container .calendar-container{
+        float: unset;
+    }
+    .contact .left .form-container .submit-button{
+        margin-top: 400px;
+    }
+    .contact .left .form-container .text-input:first-child, .contact .left .form-container .text-input{
+        background-color: unset;
+        margin: 25px auto;
+    }
+    .contact .left .form-container .submit-button{
+        width: 100%;
+    }
+    .contact .left .form-container .form-pic-container .form-pic{
+        display: none;
+    }
+
+}
+@media(max-width: 800px){
+
     .contact .left{
         width: 100%;
         /* order: 2; */
@@ -132,9 +198,6 @@
     }
     .contact .left .form-container .submit-button{
         width: 100%;
-        margin-top: 0px;
-    }
-    .contact .left .form-container .form-pic-container{
-        display: none;
+        /* margin-top: 0px; */
     }
 }

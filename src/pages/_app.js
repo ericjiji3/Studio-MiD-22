@@ -26,6 +26,7 @@ export default function App({ Component, pageProps, router}) {
   const finishStart = () =>{
     setStart(true);
   }
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
             const loader = document.getElementById('globalLoader');

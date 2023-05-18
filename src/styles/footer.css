@@ -15,7 +15,7 @@
 .footer .logos a:first-child{
     margin-right: 5px;
 }
-@media(max-width: 500px){
+@media(max-width: 1200px){
     .footer{
         margin: 25px;
         width: calc(100% - 50px);

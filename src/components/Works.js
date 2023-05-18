@@ -25,14 +25,17 @@ export default function Works(props){
         }else{
             setIndex(index-1);
         }
+        console.log(index);
     }
 
     function next(imageList){
+        
         if(index == imageList.length - 1){
             setIndex(0);
         }else{
             setIndex(index+1);
         }
+        console.log(index);
     }
     function closeModal(e){
         e.preventDefault();
@@ -54,7 +57,7 @@ export default function Works(props){
                     <Image className="close" onClick={()=>closeButton()} src={close} alt="oops"/>
                     {
                         shadows1.map((work, key) => {
-                            console.log(work);
+                            
                             return(
                                 <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
                                     <Image 
@@ -80,10 +83,9 @@ export default function Works(props){
                 <div className="modal" ref={innerMod}>
                 <Image className="close" onClick={()=>closeButton()} src={close} alt="oops"/>
                     {
-                        utility.map((work, key) => {
-                            console.log(work);
+                        utility.map((work, key2) => {
                             return(
-                                <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
+                                <div className={index==key2 ? 'work-container active' : 'work-container'} key={key2}>
                                     <Image 
                                         src={work.src}
                                         width={400}
@@ -95,8 +97,8 @@ export default function Works(props){
                         })
                     }
                     <div className="buttons">
-                        <Image className="prev" onClick={()=>{prev(shadows1)}} src={arrow} alt="oops"/>
-                        <Image className="next" onClick={()=>{next(shadows1)}} src={arrow} alt="oops"/>
+                        <Image className="prev" onClick={()=>{prev(utility)}} src={arrow} alt="oops"/>
+                        <Image className="next" onClick={()=>{next(utility)}} src={arrow} alt="oops"/>
                     </div>
                 </div>
             </div>
@@ -107,10 +109,9 @@ export default function Works(props){
                 <div className="modal" ref={innerMod}>
                 <Image className="close" onClick={()=>closeButton()} src={close} alt="oops"/>
                     {
-                        shadows2.map((work, key) => {
-                            console.log(work);
+                        shadows2.map((work, key3) => {
                             return(
-                                <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
+                                <div className={index==key3 ? 'work-container active' : 'work-container'} key={key3}>
                                     <Image 
                                         src={work.src}
                                         width={400}
@@ -122,8 +123,8 @@ export default function Works(props){
                         })
                     }
                     <div className="buttons">
-                        <Image className="prev" onClick={()=>{prev(shadows1)}} src={arrow} alt="oops"/>
-                        <Image className="next" onClick={()=>{next(shadows1)}} src={arrow} alt="oops"/>
+                        <Image className="prev" onClick={()=>{prev(shadows2)}} src={arrow} alt="oops"/>
+                        <Image className="next" onClick={()=>{next(shadows2)}} src={arrow} alt="oops"/>
                     </div>
                 </div>
             </div>
@@ -134,10 +135,9 @@ export default function Works(props){
                 <div className="modal" ref={innerMod}>
                 <Image className="close" onClick={()=>closeButton()} src={close} alt="oops"/>
                     {
-                        shadows3.map((work, key) => {
-                            console.log(work);
+                        shadows3.map((work, key4) => {
                             return(
-                                <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
+                                <div className={index==key4 ? 'work-container active' : 'work-container'} key={key4}>
                                     <Image 
                                         src={work.src}
                                         width={400}
@@ -149,8 +149,8 @@ export default function Works(props){
                         })
                     }
                     <div className="buttons">
-                        <Image className="prev" onClick={()=>{prev(shadows1)}} src={arrow} alt="oops"/>
-                        <Image className="next" onClick={()=>{next(shadows1)}} src={arrow} alt="oops"/>
+                        <Image className="prev" onClick={()=>{prev(shadows3)}} src={arrow} alt="oops"/>
+                        <Image className="next" onClick={()=>{next(shadows3)}} src={arrow} alt="oops"/>
                     </div>
                 </div>
             </div>
@@ -161,10 +161,9 @@ export default function Works(props){
                 <div className="modal" ref={innerMod}>
                 <Image className="close" onClick={()=>closeButton()} src={close} alt="oops"/>
                     {
-                        plasticIdentity.map((work, key) => {
-                            console.log(work);
+                        plasticIdentity.map((work, key5) => {
                             return(
-                                <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
+                                <div className={index==key5 ? 'work-container active' : 'work-container'} key={key5}>
                                     <Image 
                                         src={work.src}
                                         width={400}
@@ -176,8 +175,8 @@ export default function Works(props){
                         })
                     }
                     <div className="buttons">
-                        <Image className="prev" onClick={()=>{prev(shadows1)}} src={arrow} alt="oops"/>
-                        <Image className="next" onClick={()=>{next(shadows1)}} src={arrow} alt="oops"/>
+                        <Image className="prev" onClick={()=>{prev(plasticIdentity)}} src={arrow} alt="oops"/>
+                        <Image className="next" onClick={()=>{next(plasticIdentity)}} src={arrow} alt="oops"/>
                     </div>
                 </div>
             </div>
@@ -188,10 +187,9 @@ export default function Works(props){
                 <div className="modal" ref={innerMod}>
                 <Image className="close" onClick={()=>closeButton()} src={close} alt="oops"/>
                     {
-                        plasticIdentity2.map((work, key) => {
-                            console.log(work);
+                        plasticIdentity2.map((work, key6) => {
                             return(
-                                <div className={index==key ? 'work-container active' : 'work-container'} key={key}>
+                                <div className={index==key6 ? 'work-container active' : 'work-container'} key={key6}>
                                     <Image 
                                         src={work.src}
                                         width={400}
@@ -203,8 +201,8 @@ export default function Works(props){
                         })
                     }
                     <div className="buttons">
-                        <Image className="prev" onClick={()=>{prev(shadows1)}} src={arrow} alt="oops"/>
-                        <Image className="next" onClick={()=>{next(shadows1)}} src={arrow} alt="oops"/>
+                        <Image className="prev" onClick={()=>{prev(plasticIdentity2)}} src={arrow} alt="oops"/>
+                        <Image className="next" onClick={()=>{next(plasticIdentity2)}} src={arrow} alt="oops"/>
                     </div>
                 </div>
             </div>

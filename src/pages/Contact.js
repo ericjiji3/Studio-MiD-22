@@ -4,7 +4,7 @@ import React from "react";
 import cover from '../../public/images/opening/opening-04.jpg';
 import Image from 'next/image';
 import { motion,AnimatePresence } from "framer-motion";
-import formpic from '../../public/images/opening/opening-05.jpg';
+import formpic from '../../public/images/opening/opening-04.jpg';
 import { useState } from "react";
 import {DatePicker, Calendar, DateObject} from "react-multi-date-picker";
 import DatePanel from "react-multi-date-picker/plugins/date_panel";
@@ -121,32 +121,31 @@ export default function Contact(){
                         <input className="text-input" placeholder="Name" onChange={(e) => setName(e.target.value)} value={name} type="text" name="name"/>
                         <input className="text-input" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)} value={email} type="text" name="email"/>
                         <input className="text-input" placeholder="Phone Number" onChange={(e) => setPhone(e.target.value)} value={phone} type="text" name="phone"/>
-                        <input className="text-input" placeholder="Project Type" value={project} type="text" name="projectdfd"/>
                         <select className="text-input" name="project" onChange={(e) => setProject(e.target.value)}>
-                            <option value="" disabled selected hidden>Project Type</option>
-                            <option value="Graduation">Graduation</option>
-                            <option value="Creative">Creative</option>
-                            <option value="Portrait">Portrait</option>
-                            <option value="Headshot">Headshot</option>
-                            <option value="Product Shoot">Product Shoot</option>
-                            <option value="Album Cover">Album Covers</option>
-                            <option value="Fashion">Fashion</option>
-                        </select>
-                        {/* <input className="text-input" autocomplete="name" placeholder="Availability" type="text" name="your-availability"/> */}
-                        {/* <DatePicker value={value} onChange={setValue} multiple={true} /> */}
-                        <h2 class='calendar-header'>Availability</h2>
-                        <Calendar 
-                        className="rmdp-mobile"
-                        value={dates}
-                        onChange={setDates}
-                        multiple={true}
-                        plugins={[
-                            <DatePanel sort="date" key={1}/>
-                          ]}
-                        />
+                                <option value="" disabled selected hidden>Project Type</option>
+                                <option value="Graduation">Graduation</option>
+                                <option value="Creative">Creative</option>
+                                <option value="Portrait">Portrait</option>
+                                <option value="Headshot">Headshot</option>
+                                <option value="Product Shoot">Product Shoot</option>
+                                <option value="Album Cover">Album Covers</option>
+                                <option value="Fashion">Fashion</option>
+                            </select>
                         <button className="submit-button" type="submit" ref={buttonRef}>Submit</button>
                     </div>
                     <div className="form-pic-container">
+                    <div class="calendar-container">
+                            <h2 class='calendar-header'>Availability</h2>
+                            <Calendar 
+                            className="rmdp-mobile"
+                            value={dates}
+                            onChange={setDates}
+                            multiple={true}
+                            plugins={[
+                                <DatePanel sort="date" key={1}/>
+                            ]}
+                            />
+                        </div>
                         <Image src={formpic} 
                             className='form-pic'
                             alt='oops'

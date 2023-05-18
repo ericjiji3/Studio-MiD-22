@@ -114,7 +114,14 @@
     opacity: 1;
     transition: 0.15s opacity ease-in;
 }
+@media(max-width: 1200px) {
+    .home{
+        margin: 0 25px;
+        padding-top: 60px;
+    }
+}
 @media(max-width: 1000px){
+
     .carousels{
         margin: 0 -25px!important;
     }
@@ -150,10 +157,7 @@
     }
 }
 @media(max-width: 500px){
-    .home{
-        margin: 0 25px;
-        padding-top: 60px;
-    }
+
     .home .carousel-selector .carousel-select-container:before{
         bottom: 99.5%;
     }

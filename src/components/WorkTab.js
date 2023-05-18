@@ -16,22 +16,25 @@ export default function WorkTab(props){
     }
     function handleFollow(e){
         e.preventDefault();
-        setActiveImage(true);
-        if(activeImage){
-            const image = imageRef.current;
-            const localX = e.clientX - tab.current.offsetLeft - image.clientWidth/2;
-            const localY = e.clientY - tab.current.offsetTop;
-            const x = localX + 30;
-            const y = localY - image.clientHeight/2;
-            image.animate({
-                left: x + 'px',
-                top: y + 'px'
-            },{duration: 3000, fill: 'forwards'})
-            // image.style.left = localX + 30 + 'px';
-            // image.style.top = localY - image.clientHeight/2 + 'px';
-            // const imagePos = e.clientY  + image.clientHeight/2;
-            // image.style.transform = 'translateY(-' + image.clientHeight + 'px)';
+        if(window.innerWidth >= 800){
+            setActiveImage(true);
+            if(activeImage){
+                const image = imageRef.current;
+                const localX = e.clientX - tab.current.offsetLeft - image.clientWidth/2;
+                const localY = e.clientY - tab.current.offsetTop;
+                const x = localX + 30;
+                const y = localY - image.clientHeight/2;
+                image.animate({
+                    left: x + 'px',
+                    top: y + 'px'
+                },{duration: 3000, fill: 'forwards'})
+                // image.style.left = localX + 30 + 'px';
+                // image.style.top = localY - image.clientHeight/2 + 'px';
+                // const imagePos = e.clientY  + image.clientHeight/2;
+                // image.style.transform = 'translateY(-' + image.clientHeight + 'px)';
+            }
         }
+        
     }
     // onMouseOver={handleHover}
     return(
