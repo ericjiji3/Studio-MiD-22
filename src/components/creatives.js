@@ -8,7 +8,7 @@ import creative6 from '../../public/images/works/utility/utility1.jpg';
 const creatives = [
     {
         id: 0,
-        src: creative1
+        src: creative3
     },
     {
         id: 1,
@@ -16,7 +16,7 @@ const creatives = [
     },
     {
         id: 2,
-        src: creative3
+        src: creative5
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ const creatives = [
     },
     {
         id: 4,
-        src: creative5
+        src: creative1
     },
     {
         id: 5,

@@ -20,7 +20,7 @@ const grads = [
     },
     {
         id: 1,
-        src: grad2
+        src: grad6
     },
     {
         id: 2,
@@ -36,7 +36,7 @@ const grads = [
     },
     {
         id: 5,
-        src: grad6
+        src: grad2
     },
     {
         id: 6,

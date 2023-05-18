@@ -8,7 +8,7 @@ import album6 from '../../public/images/albums/album6.jpg';
 const albums = [
     {
         id: 0,
-        src: album1
+        src: album3
     },
     {
         id: 1,
@@ -16,7 +16,7 @@ const albums = [
     },
     {
         id: 2,
-        src: album3
+        src: album1
     },
     {
         id: 3,

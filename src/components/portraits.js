@@ -3,7 +3,7 @@ import portrait2 from '../../public/images/portraits/danaegrad-025.jpg';
 import portrait3 from '../../public/images/portraits/elton-31.jpg';
 import portrait4 from '../../public/images/portraits/emiree-165.jpg';
 import portrait5 from '../../public/images/portraits/epixie-1.jpg';
-import portrait6 from '../../public/images/portraits/ilanna.jpeg';
+// import portrait6 from '../../public/images/portraits/ilanna.jpeg';
 import portrait7 from '../../public/images/portraits/leah-11.jpg';
 import portrait8 from '../../public/images/portraits/nami-24.jpg';
 import portrait9 from '../../public/images/portraits/P136652.jpg';
@@ -22,7 +22,7 @@ import portrait18 from '../../public/images/portraits/victoria-129.jpg';
 const portraits = [
     {
         id: 0,
-        src: portrait1
+        src: portrait12
     },
     {
         id: 1,
@@ -30,20 +30,20 @@ const portraits = [
     },
     {
         id: 2,
-        src: portrait3
+        src: portrait16
     },
     {
         id: 3,
-        src: portrait4
+        src: portrait14
     },
     {
         id: 4,
         src: portrait5
     },
-    {
-        id: 5,
-        src: portrait6
-    },
+    // {
+    //     id: 5,
+    //     src: portrait6
+    // },
     {
         id: 6,
         src: portrait7
@@ -66,7 +66,7 @@ const portraits = [
     },
     {
         id: 11,
-        src: portrait12
+        src: portrait1
     },
     {
         id: 12,
@@ -74,7 +74,7 @@ const portraits = [
     },
     {
         id: 13,
-        src: portrait14
+        src: portrait4
     },
     {
         id: 14,
@@ -82,7 +82,7 @@ const portraits = [
     },
     {
         id: 15,
-        src: portrait16
+        src: portrait3
     },
     {
         id: 16,
