@@ -43,6 +43,9 @@
     left: -6px;
     z-index: 2;
 }
+.works .modal .close:hover{
+    cursor: pointer;
+}
 .works .modal .buttons{
     bottom: 5px;
     left: 50%;
@@ -63,4 +66,35 @@
         /* margin: 0 25px;
         padding-top: 60px; */
     }   
+    .works .modal{
+        width: 425px;
+        height: 500px;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .works .modal .work-container img{
+        object-fit: cover;
+        border-radius: 5px;
+        height: 450px;
+        width: 300px;
+    }
+    .works .modal .close{
+        width: 30px;
+        height: 30px;
+        top: -5px;
+        left: 50px;
+    }
+    .works .modal .buttons{
+        bottom: -10px;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+    }
+    .works .modal .buttons img{
+        width: 35px;
+        height: 35px;
+    }
 }

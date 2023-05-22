@@ -111,9 +111,9 @@ export default function Contact(){
     return(
         <>
         <div className="contact">
-            
+        <motion.div initial={{opacity: 0, y: -500}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -500}} transition={{duration: 0.75}}>
             <div className="left">
-            <motion.div initial={{opacity: 0, x: -1000}} animate={{opacity: 1, x: 0}} exit={{opacity: 0, x: -1000}} transition={{duration: 0.75}}>
+            
                 <h2 className="title">Let&apos;s create something cool together.</h2>
                 <h2 className="subtitle">Tell us when you&apos;re available and we&apos;ll respond within 24 hours!</h2>
                 <form className="form-container" ref={form} onSubmit={sendEmail}>
@@ -154,9 +154,9 @@ export default function Contact(){
                     </div>
                     
                 </form>
-                </motion.div>
+                
             </div>  
-            
+            </motion.div>
             
         </div>
         

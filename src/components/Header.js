@@ -30,11 +30,13 @@ export default function Header(props) {
   return (
       <nav className="navBar">
         <div className="logo">
-          <Image
-            src={Logo}
-            width= {30}
-            alt="oops"
-          />
+          <Link href="/" onClick={()=>setBurger(!burger)}>
+            <Image
+              src={Logo}
+              width= {30}
+              alt="oops"
+            />
+          </Link>
         </div>
         <div className={burger ? 'nav-container active' : 'nav-container'} style={style}>
           <ul>
