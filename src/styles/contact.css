@@ -25,6 +25,16 @@
     box-shadow: 10px 10px 0px #000000;
     position: relative;
 }
+.contact .left .form-container label .req-text{
+    display: none;
+}
+.contact .left .form-container label .req-text.active{
+    display: block;
+    margin-top: 5px;
+    font-size: 10px;
+    color: rgb(228, 29, 29);
+    font-weight: 800;
+}
 .contact .left .form-container .inputs{
     width: 50%;
 }

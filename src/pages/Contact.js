@@ -118,10 +118,19 @@ export default function Contact(){
                 <h2 className="subtitle">Tell us when you&apos;re available and we&apos;ll respond within 24 hours!</h2>
                 <form className="form-container" ref={form} onSubmit={sendEmail}>
                     <div className='inputs'>
-                        <input className="text-input" placeholder="Name" onChange={(e) => setName(e.target.value)} value={name} type="text" name="name"/>
-                        <input className="text-input" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)} value={email} type="text" name="email"/>
-                        <input className="text-input" placeholder="Phone Number" onChange={(e) => setPhone(e.target.value)} value={phone} type="text" name="phone"/>
-                        <select className="text-input" name="project" onChange={(e) => setProject(e.target.value)}>
+                        <label className="name-input">
+                            <input className="text-input" placeholder="Name" onChange={(e) => setName(e.target.value)} value={name} type="text" name="name"/>
+                            <span className={nameErr ? 'req-text active' : 'req-text'}>*Required Field</span>
+                        </label>
+                        <label className="email-input">
+                            <input className="text-input" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)} value={email} type="text" name="email"/>
+                            <span className={phoneErr ? 'req-text active' : 'req-text'}>*Required Field</span>
+                        </label>
+                        <label className="phone-input">
+                            <input className="text-input" placeholder="Phone Number" onChange={(e) => setPhone(e.target.value)} value={phone} type="text" name="phone"/>
+                            <span className={phoneErr ? 'req-text active' : 'req-text'}>*Required Field</span>
+                        </label>
+                        <select className="text-input" name="project" onChange={(e) => setProject(e.target.value)} value={project}>
                                 <option value="" disabled selected hidden>Project Type</option>
                                 <option value="Graduation">Graduation</option>
                                 <option value="Creative">Creative</option>
@@ -130,7 +139,7 @@ export default function Contact(){
                                 <option value="Product Shoot">Product Shoot</option>
                                 <option value="Album Cover">Album Covers</option>
                                 <option value="Fashion">Fashion</option>
-                            </select>
+                        </select>
                         <button className="submit-button" type="submit" ref={buttonRef}>Submit</button>
                     </div>
                     <div className="form-pic-container">
