@@ -111,7 +111,7 @@ export default function Contact(){
     return(
         <>
         <div className="contact">
-        <motion.div initial={{opacity: 0, y: -500}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -500}} transition={{duration: 0.75}}>
+        <motion.div className="animate" initial={{opacity: 0, y: -500}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -500}} transition={{duration: 0.75}}>
             <div className="left">
             
                 <h2 className="title">Let&apos;s create something cool together.</h2>
@@ -140,7 +140,7 @@ export default function Contact(){
                                 <option value="Album Cover">Album Covers</option>
                                 <option value="Fashion">Fashion</option>
                         </select>
-                        <button className="submit-button" type="submit" ref={buttonRef}>Submit</button>
+                        <button className="submit-button" type="submit" ref={buttonRef}><span class='submit-text'>Submit</span><span className="loading-animation"></span><div class="checkmark"></div></button>
                     </div>
                     <div className="form-pic-container">
                     <div class="calendar-container">
