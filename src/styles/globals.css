@@ -38,8 +38,8 @@
 html,
 body, #__next {
   max-width: 100vw;
-  overflow-x: hidden;
-  height: 100%;
+  /* overflow-x: hidden; */
+  height: auto;
   background-color: #FAF9F6;
   font-family: 'Switzer Light';
   color: #000000;

@@ -111,7 +111,7 @@ export default function Contact(){
     return(
         <>
         <div className="contact">
-        <motion.div className="animate" initial={{opacity: 0, y: -500}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -500}} transition={{duration: 0.75}}>
+        <motion.div className="animate" initial={{opacity: 0, y: -400}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -400}} transition={{duration: 0.75}}>
             <div className="left">
             
                 <h2 className="title">Let&apos;s create something cool together.</h2>
@@ -124,7 +124,7 @@ export default function Contact(){
                         </label>
                         <label className="email-input">
                             <input className="text-input" placeholder="Email Address" onChange={(e) => setEmail(e.target.value)} value={email} type="text" name="email"/>
-                            <span className={phoneErr ? 'req-text active' : 'req-text'}>*Required Field</span>
+                            <span className={emailErr ? 'req-text active' : 'req-text'}>*Required Field</span>
                         </label>
                         <label className="phone-input">
                             <input className="text-input" placeholder="Phone Number" onChange={(e) => setPhone(e.target.value)} value={phone} type="text" name="phone"/>

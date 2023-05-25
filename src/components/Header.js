@@ -10,9 +10,6 @@ export default function Header(props) {
   const [style, setStyle] = useState();
   
 
-  useEffect(()=>{
-
-  },[]);
   // useEffect(()=>{
   //   setTimeout(function(){
   //     if(!burger){

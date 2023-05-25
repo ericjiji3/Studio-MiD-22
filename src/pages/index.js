@@ -11,7 +11,8 @@ import fashion from '../components/fashion.js';
 import headshots from '../components/headshots.js';
 import { useRef, useEffect, useState } from 'react';
 import { motion,AnimatePresence } from "framer-motion";
-import { ScrollContainer } from 'react-indiana-drag-scroll'
+import { ScrollContainer } from 'react-indiana-drag-scroll';
+import swipeGIF from '../../public/images/drag-left.gif';
 import 'react-indiana-drag-scroll/dist/style.css';
 
 export default function Home() {
@@ -36,6 +37,7 @@ export default function Home() {
         setMobile(false);
       }
     }
+    
     window.addEventListener('resize', handleResize);
 
     handleResize();
@@ -45,9 +47,10 @@ export default function Home() {
       
     }
   }, [mobile])
+
   return (
-    <>
-      <motion.div exit={{opacity: 0}} transition={{duration: 0.5}}>
+    <div >
+      <motion.div exit={{opacity: 0}} transition={{duration: 0.5}} >
       <div className="home">
       {mobile ? (
 
@@ -178,6 +181,14 @@ export default function Home() {
               </ScrollContainer>
             </div>
           )}
+          <div className="mobile-icon">
+          <Image
+            src={swipeGIF}
+            width={25}
+            height={25}
+            alt="oops"
+          />
+        </div>
         </div>
 
       ) : (
@@ -272,6 +283,6 @@ export default function Home() {
       </div>
               
       </motion.div>
-    </>
+    </div>
   )
 }

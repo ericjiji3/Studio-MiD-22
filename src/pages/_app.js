@@ -44,10 +44,15 @@ export default function App({ Component, pageProps, router}) {
         setHomeStyle({ opacity: 1, transition: 'opacity 1.5s ease-in'});
       }, 1800);
     }
+
 }, [start]);
 
+
+const handleScroll = (event) =>{
+  console.log('sup');
+}
   return (
-    <>
+    <div>
       <Head>
         <title>Studio MiD 22</title>
         <meta name="description" content="" />
@@ -60,7 +65,7 @@ export default function App({ Component, pageProps, router}) {
         <StartingScreen click={start}/>
       </div>
       
-      <div className="components" style={homeStyle}>
+      <div className="components" style={homeStyle} onScroll={handleScroll}>
         <Header/>
         <AnimatePresence mode="wait" initial={false}>
         
@@ -74,6 +79,6 @@ export default function App({ Component, pageProps, router}) {
         
       </div>
 
-    </>
+    </div>
   )
 }

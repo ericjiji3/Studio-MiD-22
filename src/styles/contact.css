@@ -21,7 +21,7 @@
     font-size: 25px;
 }
 .contact .left .form-container{
-    margin-top: 50px;
+    margin: 50px 0;
     display: flex;
     padding: 25px 50px;
     border: 2px solid #000000;
@@ -100,7 +100,7 @@
     padding: 12px;
     margin-top: 30px;
     margin-bottom: 25px;
-    width: 30%;
+    width: 150px!important;
     transition: all 0.15s ease-in-out;
     position: relative;
 }
@@ -127,18 +127,21 @@
     color: #FBFBFB;
     animation: loading 0.25s forwards;
     text-align: center;
-    width: 30%;
+    /* width: 30%; */
 }
 .contact .left .form-container .submit-button.loading .loading-animation{
-    width: 14px;
-    height: 14px;
+    width: 26px;
+    height: 26px;
     border: 3px solid #FBFBFB;
     border-bottom-color: transparent;
     border-radius: 50%;
-    display: inline-block;
+    display: block;
     box-sizing: border-box;
+    margin: auto;
     animation: rotation 1s linear infinite;
     text-align: center;
+    top: 0px;
+    position: relative;
 }
 .contact .left .form-container .submit-button.success .submit-text{
     display: none;
@@ -167,6 +170,7 @@
     color: #FBFBFB;
     text-align: center;
     transition: all 0.15s ease-in-out;
+    pointer-events: none;
 }
 .contact .left .form-container .submit-button.success .checkmark{
     display: block;
@@ -276,6 +280,9 @@
         padding-top: 80px;
         margin-top: 0;
     }
+    .contact .left .subtitle{
+        padding-right: 0;
+    }
     .contact .left .form-container .inputs{
         width: 100%;
         position: relative;
@@ -284,7 +291,7 @@
     }
     .contact .left .form-container .form-pic-container{
         position: absolute;
-        top: 290px;
+        top: 42%;
     }
     .contact .left .form-container .calendar-container{
         float: unset;
@@ -294,14 +301,16 @@
     }
     .contact .left .form-container .text-input:first-child, .contact .left .form-container .text-input{
         background-color: unset;
-        margin: 25px auto;
+        /* margin: 25px auto; */
+        width: 100%;
     }
     .contact .left .form-container .submit-button{
-        width: 100%;
+        width: 100%!important;
     }
     .contact .left .form-container .form-pic-container .form-pic{
         display: none;
     }
+    
 
 }
 @media(max-width: 800px){

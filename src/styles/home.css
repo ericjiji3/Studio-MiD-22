@@ -6,6 +6,9 @@
 .home .carousels .inactive{
     animation: 0.5s galleryFade ease-in forwards;
 }
+.home .mobile-icon{
+    display: none;
+}
 .home .carousel-selector .carousel-display{
     border: 2px solid #000000;
     width: 480px;
@@ -124,7 +127,9 @@
 
     .carousels{
         margin: 0 -25px!important;
+        position: relative;
     }
+    
     .carousels .active .indiana-scroll-container{
         display: flex;
         height: 400px;
@@ -154,6 +159,14 @@
         margin: 0 10px;
         transform: translateY(-400px);
         animation: cascade 0.75s ease-in-out forwards;
+    }
+    .home .mobile-icon{
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        right: 25px;
+        /* left: 50%;
+        transform: translateX(-50%); */
     }
 }
 @media(max-width: 500px){
