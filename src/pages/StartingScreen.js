@@ -11,6 +11,7 @@ export default function StartingScreen(props){
                 width={50}
                 className="logo"
                 alt=""
+                priority
             />
             <Image
                 src={tap}
