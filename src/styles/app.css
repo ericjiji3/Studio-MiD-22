@@ -8,7 +8,7 @@
     z-index: 1;
     overflow: hidden;
 }
-html,body,#__next:has(> .theme.dark){
+html:has(> .theme.dark),body:has(> .theme.dark),#__next:has(> .theme.dark){
     background-color: #121212!important;
     transition: 0.25s background-color ease-in;
 }
