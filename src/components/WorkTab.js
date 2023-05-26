@@ -6,18 +6,23 @@ export default function WorkTab(props){
     const [activeImage, setActiveImage] = useState(false);
     const imageRef = useRef();
     const tab = useRef();
-    
 
     function handleHover(e){
         setActiveImage(true);
     }
     function handleLeave(e){
-        setActiveImage(false); 
+        e.preventDefault();
+        if(window.innerWidth >= 800){
+            setActiveImage(false);
+        }
+         
     }
     function handleFollow(e){
         e.preventDefault();
+        
         if(window.innerWidth >= 800){
             setActiveImage(true);
+            
             if(activeImage){
                 const image = imageRef.current;
                 const localX = e.clientX - tab.current.offsetLeft - image.clientWidth/2;
@@ -27,7 +32,7 @@ export default function WorkTab(props){
                 image.animate({
                     left: x + 'px',
                     top: y + 'px'
-                },{duration: 3000, fill: 'forwards'})
+                },{duration: 0, fill: 'forwards'})
                 // image.style.left = localX + 30 + 'px';
                 // image.style.top = localY - image.clientHeight/2 + 'px';
                 // const imagePos = e.clientY  + image.clientHeight/2;
@@ -36,7 +41,6 @@ export default function WorkTab(props){
         }
         
     }
-    // onMouseOver={handleHover}
     return(
         <div className={activeImage ? 'work-tab active' : 'work-tab'} onMouseMove={handleFollow} onMouseLeave={handleLeave} ref={tab}>
 
@@ -51,6 +55,7 @@ export default function WorkTab(props){
                             width={200}
                             height={300}
                             alt="oops"
+                            priority
                         />
                     
                 </div>

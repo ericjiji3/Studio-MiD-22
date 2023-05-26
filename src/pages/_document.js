@@ -3,7 +3,7 @@ import loader from "../components/loader.js";
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" translate="no">
       <Head>
         <style>
               {loader}

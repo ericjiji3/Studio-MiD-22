@@ -12,21 +12,64 @@
 .contact .left{
     width: 100%;
 }
-.contact .left .title{
+.theme .contact .left .title{
     font-size: 35px;
+    color: #000000;
+    transition: all 0.25s ease-in;
 }
-.contact .left .subtitle{
+.theme .contact .left .subtitle{
     font-family: 'Switzer ExtraLight';
-    padding-right: 75px;
     font-size: 25px;
+    margin-bottom: 15px;
+    color: #000000;
+    transition: all 0.25s ease-in;
 }
-.contact .left .form-container{
+.theme.dark .contact .left .title{
+    color: #FAF9F6;
+    transition: all 0.25s ease-in;
+}
+.theme.dark .contact .left .subtitle{
+    color: #FAF9F6;
+    transition: all 0.25s ease-in;
+}
+.theme .contact .left a{
+    text-decoration: underline;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    color: #000000;
+    transition: all 0.25s ease-in;
+}
+.theme.dark .contact .left a{
+    color: #FAF9F6;
+    transition: all 0.25s ease-in;
+}
+.contact .left a .linkText{
+    font-family: 'Switzer ExtraLight';
+    font-size: 20px;
+}
+.theme .contact .left a img{
+    margin-right: 10px;
+    transition: all 0.25s ease-in;
+}
+.theme.dark .contact .left a img{
+    margin-right: 10px;
+    filter: invert(100%);
+    transition: all 0.25s ease-in;
+}
+
+.theme .contact .left .form-container{
     margin: 50px 0;
     display: flex;
     padding: 25px 50px;
     border: 2px solid #000000;
     box-shadow: 10px 10px 0px #000000;
     position: relative;
+}
+.theme.dark .contact .left .form-container{
+    background-color: #FAF9F6;
+    box-shadow: 10px 10px 0px #818181;
+    transition: all 0.25s ease-in;
 }
 .contact .left .form-container label .req-text{
     display: none;
@@ -49,7 +92,7 @@
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
-    background-color: #faf9f6;
+    background-color: transparent;
     font-family: 'Switzer Light';
     font-size: 30px;
     color: #000000;
@@ -63,7 +106,7 @@
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
-    background-color: #faf9f6;
+    background-color: transparent;
     font-family: 'Switzer Light';
     font-size: 30px;
     color: #000000;
@@ -280,8 +323,12 @@
         padding-top: 80px;
         margin-top: 0;
     }
+    .contact .left .title{
+        font-size: 30px;
+    }
     .contact .left .subtitle{
         padding-right: 0;
+        font-size: 20px;
     }
     .contact .left .form-container .inputs{
         width: 100%;
@@ -289,9 +336,15 @@
         z-index: 2;
         height: 100%;
     }
+    .contact .left .form-container .text-input{
+        font-size: 25px;
+    }
     .contact .left .form-container .form-pic-container{
         position: absolute;
         top: 42%;
+    }
+    .contact .left .form-container .calendar-header{
+        font-size: 25px;
     }
     .contact .left .form-container .calendar-container{
         float: unset;
@@ -303,9 +356,11 @@
         background-color: unset;
         /* margin: 25px auto; */
         width: 100%;
+        font-size: 25px;
     }
     .contact .left .form-container .submit-button{
         width: 100%!important;
+        font-size: 25px;
     }
     .contact .left .form-container .form-pic-container .form-pic{
         display: none;
@@ -325,7 +380,7 @@
         /* position: absolute;
         top: 0; */
     }
-    .contact .left .form-container{
+    .theme .contact .left .form-container{
         padding: 25px 8px;
     }
     .contact .left .form-container .text-input{

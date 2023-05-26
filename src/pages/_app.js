@@ -22,37 +22,41 @@ export default function App({ Component, pageProps, router}) {
   const [startStyle, setStartStyle] = useState({display: 'block'});
   const [homeStyle, setHomeStyle] = useState({display: 'none'});
   const [start, setStart] = useState(false);
-  
+  const [mode, setMode] = useState();
+
   const finishStart = () =>{
     setStart(true);
   }
+  const toggleMode = (modeData) => {
+    setMode(modeData);
+    console.log(mode);
+  }
 
+  
   useEffect(() => {
     if (typeof window !== 'undefined') {
             const loader = document.getElementById('globalLoader');
         if (loader)
             loader.style.display = 'none';
     }
+    setTimeout(function(){
+      setStart(true);
+    }, 14000);
     if(start){
       setTimeout(function(){
         setStartStyle({ display: 'none' });
       }, 2010);
       setTimeout(function(){
-        setHomeStyle({ display: 'unset', opacity: 0 });
+        setHomeStyle({ display: 'unset', opacity: 0, overflow: 'hidden' });
       }, 1500);
       setTimeout(function(){
         setHomeStyle({ opacity: 1, transition: 'opacity 1.5s ease-in'});
       }, 1800);
     }
-
 }, [start]);
-
-
-const handleScroll = (event) =>{
-  console.log('sup');
-}
+  
   return (
-    <div>
+    <div className={mode == 'light' ? "theme dark" : "theme"}>
       <Head>
         <title>Studio MiD 22</title>
         <meta name="description" content="" />
@@ -65,9 +69,9 @@ const handleScroll = (event) =>{
         <StartingScreen click={start}/>
       </div>
       
-      <div className="components" style={homeStyle} onScroll={handleScroll}>
-        <Header/>
-        <AnimatePresence mode="wait" initial={false}>
+      <div className="components" style={homeStyle}>
+        <Header toggleMode={toggleMode}/>
+        <AnimatePresence mode="wait" initial={false} >
         
           <Component {...pageProps} key={router.asPath}/>
 

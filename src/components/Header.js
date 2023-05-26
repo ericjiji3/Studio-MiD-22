@@ -2,32 +2,44 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '../../public/mid21.png';
 import { useRouter } from 'next/router';
-import {useState, useEffect} from 'react';
+import {useState, useEffect, useRef} from 'react';
 
 export default function Header(props) {
   const router = useRouter();
   const [burger, setBurger] = useState(false);
   const [style, setStyle] = useState();
-  
+  const [gradient, setGradient] = useState(false);
+  const toggleDark = useRef();
 
-  // useEffect(()=>{
-  //   setTimeout(function(){
-  //     if(!burger){
-  //       setStyle({
-  //         display: 'none'
-  //       })
-  //     }else{
-  //       setStyle({
-  //         display: 'unset'
-  //       })
-  //     }
-      
-  //   }, 1000)
-  // })
+  const handleCheck = () =>{
+    if(toggleDark.current.checked){
+      props.toggleMode('light');
+    } else{
+      props.toggleMode('dark');
+    }
+  }
+
+  useEffect(()=>{
+    const handleScroll = (event) =>{
+      console.log(window.scrollY);
+      if(window.scrollY > 10){
+        setGradient(true);
+      } else{
+        setGradient(false);
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () =>{
+      window.removeEventListener('scroll', handleScroll);
+    }
+  })
+
   return (
-      <nav className="navBar">
+      <nav className={gradient ? "navBar active" : "navBar"}>
         <div className="logo">
-          <Link href="/" onClick={()=>setBurger(!burger)}>
+          <Link href="/">
             <Image
               src={Logo}
               width= {30}
@@ -56,6 +68,10 @@ export default function Header(props) {
               <Link href="/About" onClick={()=>setBurger(!burger)}>
                 <h2 className={router.pathname === '/About' ? 'active' : ''}>About Us</h2>
               </Link>
+            </li>
+            <li>
+              <input type="checkbox" id="darkmode-toggle" ref={toggleDark} onChange={handleCheck}/>
+              <label for="darkmode-toggle"></label>
             </li>
           </ul>
         </div>

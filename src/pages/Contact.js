@@ -9,6 +9,8 @@ import { useState } from "react";
 import {DatePicker, Calendar, DateObject} from "react-multi-date-picker";
 import DatePanel from "react-multi-date-picker/plugins/date_panel";
 import emailjs from '@emailjs/browser';
+import mailIcon from '../../public/images/mail-icon.png';
+import phoneIcon from '../../public/images/call-icon.png';
 
 export default function Contact(){
     const date = new DateObject();
@@ -116,6 +118,8 @@ export default function Contact(){
             
                 <h2 className="title">Let&apos;s create something cool together.</h2>
                 <h2 className="subtitle">Tell us when you&apos;re available and we&apos;ll respond within 24 hours!</h2>
+                <a href="mailto:studiomid22@gmail.com"><Image src={mailIcon} width={25} alt="oopsie"/><h2 className="linkText">studiomid22@gmail.com</h2></a>
+                <a href="tel:281-748-2672"><Image src={phoneIcon} width={25} alt="oopsie"/><h2 className="linkText">281-748-2672</h2></a>
                 <form className="form-container" ref={form} onSubmit={sendEmail}>
                     <div className='inputs'>
                         <label className="name-input">

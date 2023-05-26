@@ -44,7 +44,17 @@ body, #__next {
   font-family: 'Switzer Light';
   color: #000000;
   /* margin: 0 50px; */
+  /* overflow: hidden; */
   position: relative;
+  transition: background-color 0.25s ease-in;
+}
+#__next{
+  overflow-x: hidden;
+}
+@media(max-width: 1200px){
+  #__next{
+    overflow-x: unset;
+  }
 }
 @media(min-width: 500px){
   ::-webkit-scrollbar {
@@ -54,7 +64,6 @@ body, #__next {
   }
   ::-webkit-scrollbar-thumb {
     background-color: #000000;
-    outline: 1px solid #FAF9F6;
     border-radius: 15px;
   }
 }

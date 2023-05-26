@@ -25,7 +25,6 @@ export default function Works(props){
         }else{
             setIndex(index-1);
         }
-        console.log(index);
     }
 
     function next(imageList){
@@ -35,7 +34,6 @@ export default function Works(props){
         }else{
             setIndex(index+1);
         }
-        console.log(index);
     }
     function closeModal(e){
         e.preventDefault();

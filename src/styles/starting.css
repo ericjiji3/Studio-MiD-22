@@ -19,6 +19,24 @@
     transform: translate(-50%, -50%);
     z-index: 3;
 }
+.starting-screen .tap{
+    position: absolute;
+    top: calc(50% + 60px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    opacity: 0;
+    animation: 1.5s tapFadeIn ease-in forwards;
+    animation-delay: 5s;
+}
+@keyframes tapFadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .starting-screen .covers-container{
     position:relative;
 

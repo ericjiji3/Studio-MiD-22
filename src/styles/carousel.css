@@ -10,13 +10,17 @@
     display: flex;
     align-items: center;
 }
-.carousel::before, .carousel::after{
+.theme .carousel::before, .theme .carousel::after{
     content: "";
     height: 450px;
     position: absolute;
     width: 200px;
     z-index: 2;
     background: linear-gradient(to right,  #FAF9F6 0%,rgba(255,255,255,0) 50%);
+    transition: all 0.25s ease-in;
+}
+.theme.dark .carousel::before, .theme.dark .carousel::after{
+    background: linear-gradient(to right,  #121212 0%,rgba(255,255,255,0) 50%);
 }
 .carousel::after{
     right: 0;

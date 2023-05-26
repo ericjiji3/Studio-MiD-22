@@ -1,5 +1,6 @@
 .navBar{
-    margin: 35px 100px 20px;
+    padding-top: 35px;
+    margin: 0px 100px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,15 +22,27 @@
 /* .navBar ul li{
     padding: 0 25px;
 } */
-.navBar ul li a{
+.theme.dark .navBar ul li a{
+    color: #FAF9F6;
+    transition: all 0.25s ease-in;
+}
+.theme .navBar ul li a{
     position: relative;
     text-decoration: none;
     color: #000;
+    transition: all 0.25s ease-in;
 }
-.navBar ul li a h2:hover{
+.theme.dark .navBar ul li a h2:hover{
+    color: #FAF9F6;
+}
+.theme .navBar ul li a h2:hover{
     color: #000;
 }
-.navBar ul li a h2::before{
+.theme.dark .navBar ul li a h2::before{
+    background-color: #FAF9F6;
+    transition: transform 0.25s ease;
+}
+.theme .navBar ul li a h2::before{
     content: "";
     position: absolute;
     display: block;
@@ -39,13 +52,56 @@
     left: 0;
     background-color: #000;
     transform: scaleX(0);
-    transition: transform 0.3s ease;
+    transition: transform 0.25s ease;
 }
 .navBar ul li a h2:hover::before{
     transform: scaleX(1);
 }
 .navBar ul li h2.active::before{
     transform: scaleX(1);
+}
+.navBar ul li label{
+    width:50px;
+    height:25px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 1px 5px rgba(0,0,0,0.4), inset 0px -1px 5px rgba(255,255,255,0.4);
+    cursor: pointer;
+    position: relative;
+    top: -7px;
+    border: 1px solid #000000;
+}
+.navBar ul li label:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 48%;
+    transform: translateY(-48%);
+    left: 3px;
+    background: linear-gradient(180deg,#363636,#000000);
+    border-radius: 180px;
+    
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
+}
+.navBar ul li input {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+.navBar ul li input:checked + label {
+    background: #242424;
+    border: 1px solid #FAF9F6!important;
+}
+.navBar ul li input:checked + label:after {
+    left:47px;
+    transform: translate(-100%, -47%);
+    background: linear-gradient(180deg,#eeece5,#FAF9F6);
+}
+.navBar ul li label, .navBar ul li label:after {
+    transition: 0.3s
 }
 .navBar .burger-mobile{
     display: none;
@@ -58,20 +114,29 @@
         margin-top: 20px;
         margin-bottom: -10px; */
         margin: 0;
-        padding: 20px 25px 0px 25px;
+        padding: 20px 25px;
         margin-bottom: -10px;
         position: fixed;
         z-index: 2;
         /* width: calc(100% - 50px); */
         width: 100%;
         /* mix-blend-mode: ; */
+        transition: all 0.2s ease-in;
+    }
+    .theme .navBar.active{
+        background-color: #00000040;
+        transition: all 0.25s ease-in;
+    }
+    .theme.dark .navBar.active{
+        background-color: #6b6b6b27;
+        transition: all 0.25s ease-in;
     }
     .navBar .nav-container{
         opacity: 0;
         position: absolute;
         transition: 0.5s opacity ease;
     }
-    .navBar .nav-container ul{
+    .theme .navBar .nav-container ul{
         display: block;
         position: fixed;
         width: 100vw;
@@ -82,7 +147,11 @@
         background-color: #FAF9F6;
         z-index: 0;
         visibility: hidden;
-        transition: 0.5s visibility ease;
+        transition: 0.5s visibility ease, 0.25s background-color ease-in;
+    }
+    .theme.dark .navBar .nav-container ul{
+        background-color: #121212;
+        transition: 0.5s visibility ease, 0.25s background-color ease-in;
     }
     .navBar .nav-container ul li{
         margin: 10px 0;
@@ -121,7 +190,7 @@
         width: 30px;
         height: 24px;
     }
-    .navBar .burger-mobile .burger{
+    .theme .navBar .burger-mobile .burger{
         background: #000000;
         width: 30px;
         height: 3px;
@@ -130,7 +199,11 @@
         transform: translateY(12px);
         z-index: 2;
     }
-    .navBar .burger-mobile .burger::before, .burger-mobile .burger::after{
+    .theme.dark .navBar .burger-mobile .burger{
+        background: #FAF9F6;
+        transition: background 10ms 300ms ease;
+    }
+    .theme .navBar .burger-mobile .burger::before, .theme .burger-mobile .burger::after{
         transition: top 300ms 350ms ease,
         transform 300ms 50ms ease;
       position: absolute;
@@ -138,6 +211,11 @@
       width: 30px;
       height: 3px;
       content: '';
+      transition: 0.25s all ease-in;
+    }
+    .theme.dark .navBar .burger-mobile .burger::before, .theme.dark .burger-mobile .burger::after{
+        background: #FAF9F6;
+        transition: 0.25s all ease-in;
     }
     .navBar .burger-mobile .burger::before{
         top: -9px;
@@ -145,7 +223,7 @@
     .navBar .burger-mobile .burger::after{
         top: 9px;
     }
-    .navBar .burger-mobile.active .burger{
+    .theme .navBar .burger-mobile.active .burger{
         background: transparent;
     }
     .navBar .burger-mobile.active .burger::before, .navBar .burger-mobile.active .burger::after{

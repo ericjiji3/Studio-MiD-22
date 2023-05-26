@@ -49,7 +49,7 @@ export default function Home() {
   }, [mobile])
 
   return (
-    <div >
+    <div>
       <motion.div exit={{opacity: 0}} transition={{duration: 0.5}} >
       <div className="home">
       {mobile ? (

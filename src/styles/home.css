@@ -9,15 +9,21 @@
 .home .mobile-icon{
     display: none;
 }
-.home .carousel-selector .carousel-display{
+.theme .home .carousel-selector .carousel-display{
     border: 2px solid #000000;
     width: 480px;
     border-radius: 15px;
-    background-color: #D9D9D915;
+    background-color: #FAF9F6;
     margin: 15px auto 0;
     max-width: 100%;
     overflow: hidden;
     animation: screenExpand 0.75s ease-in;
+
+}
+.theme.dark .home .carousel-selector .carousel-display{
+    background-color: #121212;
+    color: #FAF9F6;
+    border: 2px solid #FAF9F6;
 }
 .home .carousel-selector .carousel-display .scroll{
     white-space: nowrap;
@@ -30,7 +36,7 @@
     display: inline-block;
     margin: 0 5px;
 }
-.home .carousel-selector .carousel-select-container{
+.theme .home .carousel-selector .carousel-select-container{
     width: 300px;
     margin: auto;
     background-color: #D9D9D915;
@@ -38,9 +44,16 @@
     position: relative;
     margin-top: 25px;
     border-radius: 15px;
-    
+    color: #000000;;
+    transition: 0.25s all ease-in;
 }
-.home .carousel-selector .carousel-select-container:before{
+.theme.dark .home .carousel-selector .carousel-select-container{
+    background-color: #121212;
+    border: 2px solid #faf9f6;
+    color: #faf9f6;
+    transition: 0.25s all ease-in;
+}
+.theme .home .carousel-selector .carousel-select-container:before{
     content: '';
 	position: absolute;
 	width: 0;
@@ -53,6 +66,12 @@
 
 	border-bottom-color: #faf9f6;
 	filter: drop-shadow(0 -0.1rem 0 rgba(0, 0, 0, 1));
+    transition: 0.25s all ease-in;
+}
+.theme.dark .home .carousel-selector .carousel-select-container:before{
+    border-bottom-color: #121212;
+	filter: drop-shadow(0 -0.1rem 0 #faf9f6);
+    transition: 0.25s all ease-in;
 }
 .home .carousel-selector .carousel-select-container .animate{
     overflow: hidden;
@@ -82,7 +101,7 @@
     font-size: 20px;
     margin: auto;
 }
-.home .carousel-selector .carousel-select-container ul li .select-text::before{
+.theme .home .carousel-selector .carousel-select-container ul li .select-text::before{
     opacity: 0;
     content: '';
     width: 0;
@@ -94,14 +113,23 @@
     top: 25%;
     left: -15px;
     animation: 2s pointerEvent linear infinite;
-    transition: 0.15s opacity ease-in;
+    transition: 0.15s opacity ease-in, 0.25s border-color ease-in;
 }
-.home .carousel-selector .carousel-select-container ul li .select-text{
+.theme.dark .home .carousel-selector .carousel-select-container ul li .select-text::before{
+    border-color: transparent transparent transparent #faf9f6;
+    transition: 0.15s opacity ease-in, 0.25s border-color ease-in;
+}
+.theme .home .carousel-selector .carousel-select-container ul li .select-text{
     text-decoration: underline #00000000;
+    transition: 0.25s all ease-in;
 }
-.home .carousel-selector .carousel-select-container ul li .select-text.active{
+.theme .home .carousel-selector .carousel-select-container ul li .select-text.active{
     text-decoration-color: #000000;
-    transition: text-decoration-color 0.5s;
+    transition: text-decoration-color 0.5s,0.25s all ease-in;
+}
+.theme.dark .home .carousel-selector .carousel-select-container ul li .select-text.active{
+    text-decoration-color: #FAF9F6;
+    transition: text-decoration-color 0.5s,0.25s all ease-in;
 }
 .home .carousel-selector .carousel-select-container ul li .select-text:hover::before{
     /* content: '';
