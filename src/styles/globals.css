@@ -49,7 +49,7 @@ body, #__next {
   transition: background-color 0.25s ease-in;
 }
 #__next{
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 @media(max-width: 1200px){
   #__next{
