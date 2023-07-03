@@ -21,7 +21,6 @@ export default function Header(props) {
 
   useEffect(()=>{
     const handleScroll = (event) =>{
-      console.log(window.scrollY);
       if(window.scrollY > 10){
         setGradient(true);
       } else{

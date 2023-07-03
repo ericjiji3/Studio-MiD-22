@@ -8,6 +8,7 @@
     display: flex;
     color: #000000;
     transition: all 0.25s ease-in;
+    justify-content: space-between;
 }
 .theme.dark .about .profile{
     color: #FAF9F6;
@@ -19,16 +20,16 @@
     margin: 100px 0;
 }
 .about .profile .image-container{
-    width: 50%;
+    width: 45%;
 }
 .about .profile .image-container img{
     object-fit: cover;
 }
 .about .profile.michelle .text-container{
-    padding-right: 50px;
+    padding-right: 0px;
 }
 .about .profile .text-container{
-    width: 50%;
+    width: 45%;
 }
 .about .profile .text-container .content{
     margin-top: 40px;
