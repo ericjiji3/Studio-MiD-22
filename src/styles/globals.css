@@ -48,8 +48,9 @@ body, #__next {
   position: relative;
   transition: background-color 0.25s ease-in;
 }
-#__next{
-  /* overflow-x: hidden; */
+html:has(.theme.dark)
+{
+  background-color: #121212!important;
 }
 @media(max-width: 1200px){
   #__next{
